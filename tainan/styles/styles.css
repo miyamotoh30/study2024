@@ -1,0 +1,169 @@
+/*
+使用するカラー
+#007AB7 濃い青
+#6CBAD8 footer
+#000000
+#FFFFFF
+
+#007AB7の透明度90%
+#EDA184の透明度20%
+#64C99Bの透明度20%
+
+#F4F4F4
+#000000の透明度25%
+#8F8F8F
+sp:max-width:768px
+*/
+
+/* mobile first*/
+/*header部分のCSS*/
+.globalNav{
+    display:none;/*ドロワーメニューのため、普段は非表示*/
+}
+header{
+    max-width: 768px;
+    height: 667px;
+    width:100%;
+    background: url(../images/spHeroImg.png) no-repeat right center/cover;
+    position:relative;
+    padding-top: 4px;
+}
+.headerContainer{
+
+    margin:0 20px 0 20px;
+    height: 663px;
+    border: 1px solid #FF0000;
+    border-bottom: none;
+}
+header h1{
+    position:absolute;
+    top: 116px;
+    left:68px;
+}
+header .snsIcons{
+    position:absolute;
+    bottom:70px;
+}
+
+header .snsIcons nav ul li{
+    margin-bottom:20px;
+}
+
+header .cityGuide{
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    position:absolute;
+    bottom:0;
+    width: 247px;
+    right:20px;
+}
+
+/*パンくずナビゲーション*/
+.mainContainer{
+    margin:0 20px;
+    border-left: 1px solid #FF0000;
+    border-right: 1px solid #FF0000;
+}
+.breadCrumb{
+    width:100%;
+    border-bottom: 1px solid #000000;
+}
+.breadCrumb nav ul{
+    display:flex;
+    padding:8px 0;
+    margin:0;
+}
+.breadCrumb nav ul li{
+    list-style: none;
+}
+.breadCrumb nav ul li a{
+    text-decoration: none;
+    color:#000000;
+}
+/*main部分*/
+main{
+    margin-bottom:10px;
+}
+.containerBottomLine{
+    border-bottom: 1px solid #FF0000;
+}
+/*footer部分のCSS*/
+footer{
+    max-width: 768px;
+    background-color: #007AB7;
+    color:#FFFFFF;
+    text-align: center;
+}
+footer ul li{
+    list-style: none;
+}
+footer ul li a{
+    text-decoration: none;
+    color:#FFFFFF;
+}
+
+.footerContainer{
+    border-left: 1px solid #FF0000;
+    border-right: 1px solid #FF0000;
+    margin:0 20px;
+}
+
+.flag{
+    margin:0 auto;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.flag img{
+    width: 34px;
+    height: 24px;
+}
+
+.footerNav{
+    width: 195px;
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: left;
+}
+.footerNav ul{
+    padding-left: 0;
+}
+.footerNav nav ul li{
+    width:100%;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom:6px;
+    margin-top:12px;
+}
+
+.footerUnder{
+    display:flex;
+}
+.footerLogo{
+    width: 71px;
+    height: 28px;
+    background: url(../images/spFooterLogo.png)  no-repeat right center/cover;
+    margin-right:24px;
+}
+.snsNav ul{
+    display:flex;
+    justify-content: space-between;
+    width:143px;
+    padding:0;
+    margin:0;
+}
+
+.snsNav ul li img{
+    display:block;
+    width: 32px;
+    height: 32px;
+
+}
+
+.footerContainer > p{
+    margin-top:24px;
+    margin-bottom: 12px;
+}
+
+@media screen and (min-width:769px){
+    
+}

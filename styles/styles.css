@@ -1,0 +1,50 @@
+/*
+使用するカラー
+#007AB7 濃い青
+#6CBAD8 footer
+#000000
+#FFFFFF
+
+#007AB7の透明度90%
+#EDA184の透明度20%
+#64C99Bの透明度20%
+
+#F4F4F4
+#000000の透明度25%
+#8F8F8F
+*/
+
+/* mobile first*/
+
+footer{
+    max-width: 768px;
+    background-color: #007AB7;
+    color:#FFFFFF;
+    padding: 20px;
+}
+footer ul li{
+    list-style: none;
+}
+footer ul li a{
+    text-decoration: none;
+    color:#FFFFFF;
+}
+
+.flag{
+    width: 34px;
+    height: 24px;
+    margin:0 auto;
+    margin-bottom: 20px;
+}
+
+.footerNav{
+    width: 195px;
+    height: 167px;
+    margin: 0 auto;
+}
+
+.footerNav nav ul li{
+    width:100%;
+    border-bottom: 1px solid #ffffff;
+}
+

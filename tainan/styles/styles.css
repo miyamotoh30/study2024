@@ -14,7 +14,12 @@
 #8F8F8F
 sp:max-width:768px
 */
-
+/*google fontsの設定*/
+body{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
 /* mobile first*/
 /*header部分のCSS*/
 .globalNav{
@@ -141,7 +146,7 @@ footer ul li a{
 .footerLogo{
     width: 71px;
     height: 28px;
-    background: url(../images/spFooterLogo.png)  no-repeat right center/cover;
+    background: url(../images/spFooterLogo.png) no-repeat right center/cover;
     margin-right:24px;
 }
 .snsNav ul{
@@ -163,6 +168,157 @@ footer ul li a{
     margin-top:24px;
     margin-bottom: 12px;
 }
+
+/*main部分*/
+main section .attraction,
+main section .gourmet,
+main section .pickup{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 40px;
+    margin:0 auto;
+    background: url(../images/spHeaderBackground.svg) no-repeat right center/cover;
+}
+h2{
+    font-size:24px;
+}
+h3{
+    font-size: 12px;
+}
+h4{
+    font-size: 24px;
+    font-weight: bold;
+    margin:20px auto 0;
+    text-align: center;
+}
+.mainImage{
+    margin-top: 20px;
+}
+
+.mainImage img{
+    width:295px;
+    height:221px;
+    margin:0;
+}
+.subImage{
+    display:flex;
+    justify-content: space-between;
+    width:295px;
+    margin-top: 20px;
+}
+.subImage img{
+    width:137px;
+    height: 150px;
+}
+.tainanAttrction article{
+    width: 295px;
+    margin:0 auto;
+}
+.tainanAttrction p{
+    background-color: rgba(100,201,115,.2);
+    width: 295px;
+    padding:8px 36px;
+    font-size: 12px;
+    margin-top:20px;
+}
+.tainanGourmet .gourmetDescription{
+    margin:60px auto;
+    font-size: 12px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding:12px 0;
+    width: 223px;
+}
+.tainanGourmet h4{
+    font-size:32px;
+}
+.tainanGourmet h5{
+    font-size: 16px;
+    text-align: center;
+}
+.tainanGourmet img{
+    width:335px;
+    height:130px;
+
+}
+.shopDescription{
+    width:223px;
+    margin:8px auto 0;
+    padding-bottom: 20px;
+    border-bottom:1px solid #000000;
+}
+.shopDescription p{
+    font-size: 12px;
+}
+.textRight{
+    text-align: right;
+}
+.tainanPickUp h4{
+    font-size: 24px;
+    font-weight: normal;
+    border-bottom: 1px solid #000000;
+    width: 223px;
+    padding-bottom:12px;
+}
+.tainanPickUp p{
+    margin:20px auto;
+    width:223px;
+
+}
+.tainanPickUp .pickupDescription{
+    margin:12px auto 40px;
+}
+.tainanPickUp .mainImage img{
+    width:223px;
+    height: 132px;
+    margin:0 auto;
+}
+.tainanPickUp .subImage{
+    display:flex;
+    width:335px;
+    margin:0 auto;
+    justify-content: space-evenly;
+}
+.tainanPickUp .subImage img{
+    width:158px;
+    height:81px;
+}
+.tainanPickUp .minSizeImage{
+    text-align: center;
+
+}
+.tainanPickUp .minSizeImage img{
+    width:175px;
+    height: 122px;
+}
+
+.underLine{
+    width:223px;
+    height:auto;
+    border-top: 1px solid #000000;
+    margin:40px auto 30px;
+}
+
+/*Modal Window CSS*/
+.modalWindow{
+    display:none;/*初期状態はModalWindowは非表示*/
+}
+
+.modalLink{
+    cursor: pointer;/*カーソルをポインタ表示にする*/
+}
+
+.openWindow{
+    display:block;
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0,0,0,.5);
+    z-index:100;
+}
+
 
 @media screen and (min-width:769px){
     

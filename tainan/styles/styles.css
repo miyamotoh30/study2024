@@ -309,17 +309,70 @@ h4{
 .modalLink{
     cursor: pointer;/*カーソルをポインタ表示にする*/
 }
+.modalWindow p{
+    position:absolute;
+    top: 46px;
+    right:46px;
+}
+.modalWindow p img{
+    width: 283px;
+    height:283px;
+}
 
+.modalWindow .closeModal{
+    z-index:110;/*絶対閉じられるように手前に置く*/
+    position:absolute;
+    display:block;
+    top: 8px;
+    right:8px;
+    width:28px;
+    height:28px;
+    background-image: url(../images/modalCloseButton.svg);
+}
+.modalBackground{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0,0,0,.7);
+    z-index:90;/*openWindowより下に表示する*/
+    animation:fadein 0.3s ease-in-out forwards;/* アニメーションを設定 */
+}
 .openWindow{
     display:block;
     position:fixed;
-    width:100vw;
-    height:100vh;
-    background-color: rgba(0,0,0,.5);
+    top:218px;
+    left:0;
+    width:375px;
+    height:375px;
+    background-color: rgba(255,255,255,.7);
     z-index:100;
+    animation:fadein 0.3s ease-in-out forwards;/* アニメーションを設定 */
 }
-
-
+/*
+.fadeoutWindow{
+    animation:fadeout 0.3s ease-in-out forwards;
+}
+*/
+/*モーダルウィンドウが表示されるときのアニメーション*/
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*
+@keyframes fadeout{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}*/
 @media screen and (min-width:769px){
     
 }

@@ -382,6 +382,21 @@ h4{
         opacity: 0;
     }
 }*/
+/*ドロワーメニュー*/
+.activeNavigation{
+    display:block;
+}
+.globalNav ul{
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0,0,0,.7);
+}
+.globalNav ul li{
+    margin-top:20px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+}
 @media screen and (min-width:769px){
     /* ヘッダー部分 */
     header{

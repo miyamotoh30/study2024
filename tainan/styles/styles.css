@@ -34,7 +34,6 @@ header{
     padding-top: 4px;
 }
 .headerContainer{
-
     margin:0 20px 0 20px;
     height: 663px;
     border: 1px solid #FF0000;
@@ -47,11 +46,15 @@ header h1{
 }
 header .snsIcons{
     position:absolute;
+    left: 20px;;
     bottom:70px;
 }
-
+header .snsIcons nav ul{
+    padding-left: 0;
+}
 header .snsIcons nav ul li{
     margin-bottom:20px;
+    list-style: none;
 }
 
 header .cityGuide{
@@ -167,6 +170,12 @@ footer ul li a{
 .footerContainer > p{
     margin-top:24px;
     margin-bottom: 12px;
+}
+
+.footerContainer .copyRight{
+    padding-top:20px;
+    padding-bottom:20px;
+    margin:0;
 }
 
 /*main部分*/
@@ -374,5 +383,128 @@ h4{
     }
 }*/
 @media screen and (min-width:769px){
-    
+    /* ヘッダー部分 */
+    header{
+        max-width: 1366px;
+        height: 768px;
+        width:100%;
+        background: url(../images/pcHeroImg.png) no-repeat right center/cover;
+        position:relative;
+    }
+    .headerContainer{
+        margin:0 83px;
+        height: 100%;
+        border-right: 1px solid #FF0000;
+        border-left: 1px solid #FF0000;
+        position:relative;
+    }    
+    header .headerContainer .logo img{
+        width:133px;
+        height: 54px;
+    }
+    header .headerContainer .logo{
+        position:absolute;
+        top:20px;
+        left:20px;
+    } 
+    header .navigation{
+        position:absolute;
+        top:50px;
+        right:20px;
+    }
+    .globalNav{
+        display: block;
+    }
+    .globalNav ul{
+        display: flex;
+        width: 644px;
+        justify-content: space-between;
+    }
+    .globalNav ul li{
+        list-style: none;
+    }
+    .globalNav ul li a{
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color:#FFFFFF;
+        text-decoration: none;
+    }
+    header .snsIcons{
+        position:absolute;
+        bottom:80px;
+    }
+    header .snsIcons nav ul li{
+        margin-bottom:30px;
+    }
+    header h1{
+        position:absolute;
+        top: 94px;
+        left:280px;
+    }    
+    header h1 img{
+        width: 300px;
+        height: 540px;
+    }
+    header .cityGuide{
+        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: bold;
+        position:absolute;
+        bottom:20px;
+        right:20px;
+        width: 467px;  
+    }
+    /* パンくず */
+    .breadCrumb nav ul{
+        padding:20px 20px 18px;
+        margin:0;
+    }
+    .breadCrumb nav ul li a{
+        font-size:20px;
+        margin-right: 3px;
+    }
+    .mainContainer{
+        margin:0 83px;
+        height: 100%;
+        border-right: 1px solid #FF0000;
+        border-left: 1px solid #FF0000;
+    }
+    main{
+        margin-bottom:0;
+    }
+    .containerBottomLine{
+        border-bottom: none;
+    }    
+    /* footer */
+    footer{
+        max-width: 1366px;
+    }
+    .footerContainer{
+        margin:0 83px;
+        height: 100%;
+    }
+    .pcFooterContents{
+        display:flex;
+        justify-content:left;
+    }
+    .footerNav{
+        margin:0;
+        margin-left:20px;
+        margin-bottom:20px;
+        flex-basis: 33%;
+    }
+    .footerNav nav{
+        width: 100%;
+    }
+    .footerUnder{
+        flex-basis:66%;
+        display:flex;
+        justify-content: space-between;
+    }
+    .footerLogo{
+        width: 256px;
+        height:103px;
+        margin-right:0;
+    }
 }

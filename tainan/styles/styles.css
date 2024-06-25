@@ -261,7 +261,7 @@ h4{
 .shopDescription p{
     font-size: 12px;
 }
-.textRight{
+.textPosition{
     text-align: right;
 }
 .tainanPickUp h4{
@@ -270,6 +270,9 @@ h4{
     border-bottom: 1px solid #000000;
     width: 223px;
     padding-bottom:12px;
+}
+.pcOnly{
+    display:none;
 }
 .tainanPickUp p{
     margin:20px auto;
@@ -382,21 +385,7 @@ h4{
         opacity: 0;
     }
 }*/
-/*ドロワーメニュー*/
-.activeNavigation{
-    display:block;
-}
-.globalNav ul{
-    width:100vw;
-    height:100vh;
-    background-color: rgba(0,0,0,.7);
-}
-.globalNav ul li{
-    margin-top:20px;
-    color: #FFFFFF;
-    font-size: 20px;
-    font-weight: bold;
-}
+
 @media screen and (min-width:769px){
     /* ヘッダー部分 */
     header{
@@ -472,7 +461,8 @@ h4{
     }
     /* パンくず */
     .breadCrumb nav ul{
-        padding:20px 20px 18px;
+        padding-top:20px;
+        padding-bottom: 18px;
         margin:0;
     }
     .breadCrumb nav ul li a{
@@ -521,5 +511,178 @@ h4{
         width: 256px;
         height:103px;
         margin-right:0;
+    }
+/*メイン部分*/
+    main section .attraction,
+    main section .pickup{
+        margin:0;
+    }
+    main section article h4{
+        margin:80px 0 0;
+        text-align: left;
+    }
+    .tainanAttrction article{
+        max-width: 1160px;
+        width:100%;
+    }
+    .mainContainer{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .anpeirou1,
+    .anpeirou2,
+    .sekkanrou1,
+    .sekkanrou2{
+        display:flex;
+        max-width:1160px;
+        max-height: 304px;
+        justify-content: space-between;
+    }
+    .anpeirou1,
+    .sekkanrou1{
+        margin-top:20px;
+    }
+    .anpeirou2,
+    .sekkanrou2{
+        margin-top:40px;
+    }
+    .mainImage{
+        flex-basis: 50%;
+        margin-top: 0;
+    }
+    .mainImage img{
+        width:100%;
+        height:100%;
+    }
+    .anpeirou1 p,
+    .anpeirou2 p,
+    .sekkanrou1 p,
+    .sekkanrou2 p{
+        flex-basis: 40%;
+        margin: 0;
+        padding: 40px;
+    }
+    .subImage{
+        flex-basis: 50%;
+        max-width: 600px;
+        margin-top: 0;
+    }
+    .subImage img{
+        width:48%;
+    }
+    /*groumet*/
+    main section .gourmet{
+        margin:44px 0 0 auto;
+    }
+    .tainanGourmet h4,
+    .tainanGourmet h5{
+        display:inline-block;
+    }
+    .tainanGourmet .gourmetDescription{
+        margin:80px auto 0 0;
+        padding:60px 0;
+        width:38%;
+    }
+    .gourmetShopGroup{
+        display: flex;
+        justify-content: space-between;
+    }
+    .gourmetShopGroup article{
+        flex-basis: 47%;
+    }
+    .gourmetShopGroup article p img{
+        width:100%;
+        height:auto;
+    }
+    .shopDescription{
+        margin:0;
+        width:100%;
+    }
+    .textPosition{
+        text-align: left;
+    }
+    /* pickup */
+    main .tainanPickUp h4,
+    main .tainanPickUp .pickupDescription{
+        margin:0;
+        width:38%;
+    }
+    main .tainanPickUp h4{
+        font-size:36px;
+        margin-top: 80px;
+    }
+    main .tainanPickUp .pickupDescription{
+        padding-top:44px;
+        font-size:20px;
+    }
+    main .tainanPickUp .flexBox{
+        display:flex;
+        justify-content: space-between;
+    }
+    main .tainanPickUp article .spOnly{
+        display:none;
+    }
+    main .tainanPickUp article .pcOnly{
+        display:block;
+    }
+    main .tainanPickUp .flexBox .mainImage{
+        flex-basis:51%;
+        margin:0;
+    }
+    main .tainanPickUp .flexBox .mainImage img{
+        width:100%;
+        height:100%;
+    }
+    main .tainanPickUp .flexBox div{
+        flex-basis: 38%;
+        align-items: center;
+        padding-top:74px;
+    }
+    main .tainanPickUp .flexBox div p{
+        margin:0;
+        font-size: 20px;
+        width:100%;
+    }
+    main .tainanPickUp article .subImage{
+        max-width: 1080px;
+        max-height: 214px;
+        width:100%;
+        margin:80px 0 0 0;
+    }
+    main .tainanPickUp article .subImage img{
+        flex-basis: 48%;
+        width:48%;
+        /*max-height: 214px;*/
+        height:inherit;
+    }
+    main .tainanPickUp article .hotelDescription{
+        max-width:1080px;
+        width:100%;
+        text-align: center;
+        margin-top: 80px;
+    }
+    main .tainanPickUp .lotasArticle{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 80px;
+    }
+    main .tainanPickUp .lotasArticle .minSizeImage{
+        flex-basis: 52%;
+        margin:0;
+    }
+    main .tainanPickUp .lotasArticle .minSizeImage img{
+        width:100%;
+        height: inherit;
+    }
+    main .tainanPickUp .lotasArticle div{
+        flex-basis: 36%;
+    }
+    main .tainanPickUp .lotasArticle div p{
+        margin:0;
+        width:100%;
+    }
+    main .tainanPickUp .lotasArticle div .minSizeImage{
+        margin-top:20px;
     }
 }

@@ -685,4 +685,17 @@ h4{
     main .tainanPickUp .lotasArticle div .minSizeImage{
         margin-top:20px;
     }
+
+    /*モーダルウィンドウ*/
+    .openWindow{
+        width:45vw;
+        height:45vw;
+        top:25%;
+        left:30vw;    
+    }
+    .gourmetShopGroup .modalWindow p img{
+        width:90%;
+        height:inherit;
+        margin:0 12%;
+    }
 }

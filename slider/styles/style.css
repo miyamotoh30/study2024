@@ -13,7 +13,7 @@ body{
     background-color: #000000;
 }
 
-.slider{
+.slider1,.slider2,.slider3,.slider4,.slider5{
     width:100px;
     height:100px;
     border:1px solid #000000;
@@ -24,28 +24,36 @@ body{
 }
 
 .slider1{
-    left:0;
     background-color: #ccc;
 }
 .slider2{
-    left:120px;
     background-color: #aaa;
 }
 .slider3{
-    left:240px;
     background-color: #888;
 }
 .slider4{
-    left:360px;
     background-color: #555;
 
 }
 .slider5{
-    left: 480px;
     background-color: #222;
 }
-
-
+.position1{
+    left:0;
+}
+.position2{
+    left:120px;
+}
+.position3{
+    left:240px;
+}
+.position4{
+    left:360px;
+}
+.position5{
+    left: 480px;
+}
 
 
 #prev{

@@ -19,12 +19,88 @@ body{
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 400;
     font-style: normal;
+    overflow-x: hidden; /* ドロワーメニュー対応　横スクロールバーを非表示 */
 }  
 /* mobile first*/
 /*header部分のCSS*/
-.globalNav{
-    display:none;/*ドロワーメニューのため、普段は非表示*/
+/*ドロワーメニュー*/
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: -100%; 
+    width: 100%; /* 画面幅一杯に広げる */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 60px; /* To accommodate header */
+    transition: left 0.3s ease;
+    z-index: 900; /* 他の要素より手前に表示 */
+    background-image: url(../images/taiwanLogo.svg); /* 画像のパスを指定 */
+    background-repeat: no-repeat;
+    background-position: top left; /* 右上に配置 */
 }
+
+.navigation nav {
+  padding: 20px;
+}
+
+.navigation nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+.navigation nav ul li {
+  margin-bottom: 10px;
+}
+
+.navigation nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  border-bottom: 1px solid #fff;
+}
+
+
+.isOpen {
+  left: 0;
+}
+
+.menu {
+color: #fff;
+font-size: 24px;
+text-align: center;
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+.top {
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+.policy {
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+
+
+.navButton {
+background-image: url(../images/drawerIcon.png);
+background-repeat: no-repeat;
+z-index: 1000;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+position: absolute;
+left: 300px;
+top: 5px;
+}
+.closeBtn{
+    background-image: url(../images/drawerClose.svg);
+}
+/*ドロワーメニューここまで*/
+
 header{
     max-width: 768px;
     height: 667px;
@@ -411,20 +487,28 @@ h4{
         top:20px;
         left:20px;
     } 
+    .navButton,
+    .menu{
+        display:none;
+    }
     header .navigation{
         position:absolute;
-        top:50px;
-        right:20px;
+        top:0px;
+        left:30%;
+        background: none;
+        height:auto;
+        margin:0;
+        padding:0;
+
     }
-    .globalNav{
-        display: block;
-    }
+
     .globalNav ul{
         display: flex;
         width: 644px;
         justify-content: space-between;
     }
     .globalNav ul li{
+        margin:0;
         list-style: none;
     }
     .globalNav ul li a{

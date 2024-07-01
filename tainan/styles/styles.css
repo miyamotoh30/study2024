@@ -34,7 +34,7 @@ body{
     background-color: rgba(0, 0, 0, 0.7);
     padding-top: 60px; /* To accommodate header */
     transition: left 0.3s ease;
-    z-index: 900; /* 他の要素より手前に表示 */
+    z-index: 500; /* 他の要素より手前に表示 */
     background-image: url(../images/taiwanLogo.svg); /* 画像のパスを指定 */
     background-repeat: no-repeat;
     background-position: top left; /* 右上に配置 */
@@ -88,7 +88,7 @@ margin-bottom: 30px;
 .navButton {
 background-image: url(../images/drawerIcon.png);
 background-repeat: no-repeat;
-z-index: 1000;
+z-index: 510;
 width: 50px;
 height: 50px;
 border-radius: 50%;
@@ -142,7 +142,48 @@ header .cityGuide{
     width: 247px;
     right:20px;
 }
-
+/* ローティング仕様 */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;    
+    bottom: 0;
+    right: 0;
+    background: #007AB7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:600;
+  }
+  
+  .loadingBox img {
+    text-align: center;
+    width: 287px;
+    z-index:610;
+  }   
+  
+  
+  @keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+  
+    50% {
+        opacity: 1; 
+    }
+    
+    80% {
+      opacity: 1; 
+  }
+    100% {
+        opacity: 0;
+    }
+  }
+  
+  .animation_loading {
+    animation: fadeInOut 3s ease;
+  }
+  /*ローディング画面ここまで*/
 /*パンくずナビゲーション*/
 .mainContainer{
     margin:0 20px;

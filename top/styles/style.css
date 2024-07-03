@@ -127,3 +127,26 @@ footer p{
     padding:1em;
     text-align: center;
 }
+
+@media screen and (min-width:769px){
+    h1{
+        font-size: 6em;
+    }
+    section{
+        height:200vh;
+    }
+    h2{
+        padding-left: 0;
+        margin-top: 36px;
+    }
+    main section nav ul li{
+        margin-top:48px;
+    }
+    
+    #information p{
+        margin-top:36px;
+    }
+    .dlBackground{
+        margin-top:36px;
+    }
+}

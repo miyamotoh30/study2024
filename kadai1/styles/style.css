@@ -1,0 +1,706 @@
+@charset "utf-8";
+
+main {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  color:#333333;
+}
+.notoSerifJpRegular {
+    font-family: "Noto Serif JP", serif;
+}
+  
+header{
+    background-color:#ffffff;
+    max-width:768px;
+    margin:0 auto;
+}
+
+header h1{
+    position:absolute;
+    top: 16px;
+    left:12px;
+    width:80%;
+    display:inline-block;
+}
+header h1 img{
+    width: 240px;
+}
+
+.container{
+    margin:0 auto;
+}
+
+main{
+    margin-top:16px;
+    margin-bottom:56px;
+}
+
+main .heroImage{
+    width:auto;
+    height:480px;
+    background: url(../images/hero3.png) no-repeat right center/cover;
+}
+
+main section{
+    margin:80px 12px 0 12px;
+}
+
+main section h2{
+    font-size:28px;
+    font-weight:bold;
+    text-align: center;
+    margin-bottom: 19px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+main section h2 span{
+    font-size:12px;
+    color: #223E69;
+    font-weight:normal;
+    position: relative;
+    padding:0 65px;
+}
+/*サブメニューの左右に線を引く　width:60px*/
+main section h2 span::before,
+main section h2 span::after{
+    content:"";
+    width:60px;
+    border-top:#223E69 1px solid;
+    position:absolute;
+    top:8px;
+
+}
+main section h2 span::before{
+    right:0;
+}
+main section h2 span::after{
+    left:0;
+}
+main section article h3{
+    font-size:20px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom:16px;
+    letter-spacing: 0.1em;
+}
+
+main section article p{
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    line-height: 2.0;
+}
+.concept article{
+    max-width:1020px;
+    margin:0 auto;
+}
+
+.service > div{
+    width:351px;
+    margin:0 auto;
+}
+
+.service article{
+    margin-bottom: 40px;
+}
+.service article > p{
+    max-width:351px;
+    margin-bottom:8px;
+}
+
+.service article h3,
+.service article p{
+    margin-bottom:8px;
+}
+
+.btnMore{
+    text-align: right;
+}
+
+.btnMore::after{
+    margin-left: 3px;
+    display:inline-block;
+    content: " ";
+    background:#333333;
+    height: 10px;
+    width: 5px;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.flow,.contact{
+    margin-left: 0;
+    margin-right:0;
+    background-color: #d6d6d6;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-shadow: rgba(33, 33, 33, .5) 5px 5px 5px;
+}
+
+/*flowのサブセクションだけ色を変える*/
+.flow h2 span{
+    color:#b71b26;
+}
+.flow h2 span::before,
+.flow h2 span::after{
+    border-color: #b71b26;
+}
+.flow ol{
+    text-align: center;
+}
+.flow ol li{
+    font-size:16px;
+    font-weight: 500;
+    line-height: 1.8;
+    width: 300px;
+    color: #ffffff;
+    margin: 12px auto;
+    background-color: #333333;
+    border-radius: 16px;
+}
+
+.arrowRed {
+    background:#b71b26;
+    height: 16px;
+    width: 32px;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    margin:0 auto;
+}
+
+.arrowRed:nth-of-type(1){
+    opacity: 0.4;
+}
+.arrowRed:nth-of-type(2){
+    opacity: 0.5;
+}
+.arrowRed:nth-of-type(3){
+    opacity: 0.6;
+}
+.arrowRed:nth-of-type(4){
+    opacity: 0.7;
+}
+.questionAndAnswer{
+    margin-top:24px;
+    max-width:1020px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.badge{
+    flex-basis: 8vw;
+    color:#ffffff;
+    font-weight:bold;
+    font-size: 20px;
+    line-height: 1.5;
+    padding:3px;
+    width: 32px;
+    height: 32px;
+    border-radius:16px;
+}
+.badgeQuestion{
+    background-color: #333333;
+}
+.badgeAnswer{
+    background-color: #b71b26;
+}
+
+.questionAndAnswer .question,
+.questionAndAnswer .answer{
+    flex-basis:80vw;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top:3px;
+}
+
+.contact{
+    box-shadow: none;
+    text-align: center;
+}
+.contact h2 span{
+    color: #333333;
+}
+.contact h2 span::before,
+.contact h2 span::after{
+    border-color: #333333;
+}
+.contact form{
+    margin:0 12px;
+}
+.contact form p{
+    display:inline-block;
+    font-size:16px;
+    font-weight: bold;
+    margin-top:24px;
+}
+.contact form .badgeCaution{
+    display:inline-block;
+    background-color: #b71b26;
+    color: #ffffff;
+    padding:4px 9px;
+    font-size:10px;
+    border-radius:18px;
+    vertical-align: top;
+}
+.contact form input{
+    margin-top:8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: #ffffff;
+    display:block;
+    width:100%;
+    height: 30px;
+}
+.contact form input[type="number"]{
+    width:125px;
+    display:inline;
+}
+.contact form .postMark{
+    display: inline;
+    vertical-align: bottom;
+}
+.contact form .postNumber{
+    text-align: left;
+}
+.contact form input[type="textarea"]{
+    margin-bottom:24px;
+    height: 120px;
+}
+.contact form button{
+    width:200px;
+    padding:16px;
+    background-color: #333333;
+    color:#ffffff;
+}
+.contact form .radioBtnGroup{
+    margin-top: 18px;
+}
+.contact form .radioBtnGroup label{
+    display:inline-block;
+    width: 25%;
+}
+.contact form .radioBtnGroup input[type="radio"]{
+    display:inline-block;
+    width:25%;
+    text-align: right;
+    vertical-align: middle;
+    margin-top:0;
+}
+
+.arrowWhite{
+    margin-left: 3px;
+    display:inline-block;
+    background: #fff;
+    height: 19px;
+    width: 10px;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    margin-left: 8px;
+}
+
+/*トップにリンクした矢印の表示*/
+.topLink{
+    background-color: #333333;
+    width:46px;
+    height:46px;
+    padding-top: 12px;
+    text-align: center;
+    position: fixed;
+    right: 2px;
+    bottom:15px;
+}
+.arrowUp {
+    display: inline-block;
+    vertical-align: middle;
+    color: #333;
+    line-height: 1;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #ffffff;
+    border-left: 0;
+    border-bottom: 0;
+    box-sizing: border-box;
+    transform: translateY(25%) rotate(-45deg);
+  }
+
+  
+footer{
+    background-color: #333333;
+    font-size: 12px;
+    padding-top:16px;
+    padding-bottom:17px;
+}
+footer p{
+    text-align: center;
+    color:#ffffff;
+}
+
+/*hamberger Menu*/
+header .drawerContainer{
+    position:relative;
+}
+#box{
+    display:none;
+ }
+
+#boxLabel{
+    display: inline-block;/*ラベルをinline-blockにして、高さと幅を設定できるようにする*/
+    height: 40px;
+    position: relative;/*中のバーが表示位置を調整できるようにrelativeを指定する*/
+    width: 40px;
+    background-color: #ffffff;
+    top: 8px;/*表示位置の調整*/
+    left:85%;
+}
+/*3本線の真ん中の線*/
+#boxLabel span{
+    background:  #b71b26;
+    border-radius: 4px;
+    display: block;
+    height: 10%;
+    left: 50%;
+    margin: -8% 0 0 -42%;
+    position: absolute;
+    top: 45%;
+    transition: all 0.3s ease-in-out;
+    width: 84%;
+    z-index: 41;
+}
+/*3本線の上下の線*/
+#boxLabel span::after,
+#boxLabel span::before{
+    -webkit-transform: rotate(0);
+    background: #b71b26;
+    border-radius: 4px;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 50%;
+    margin: -8% 0 0 -50%;
+    position: absolute;
+    top: 50%;
+    transform: rotate(0);/*普段は回転をかけない*/
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    z-index: 41;
+}
+#boxLabel span::after{
+    margin-top: -32%;
+}
+#boxLabel span::before{
+    margin-top: 19%; 
+}
+#box:checked ~ #drawerMenu{
+    display:block;/*チェックボックスがオンになったら表示*/
+}
+/*チェックボックスがオンになったら線を透明にする*/
+#box:checked ~ #boxLabel span{
+    background: rgba(183, 27, 38, 0);
+}
+#box:checked ~ #boxLabel span::after,
+#box:checked ~ #boxLabel span::before{
+    content: "";
+    display: block;
+    height: 100%;
+    left: 50%;
+    margin: -8% 0 0 -42%;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 41;
+}
+/*チェックボックスがオンになったら線を45度回転する*/
+#box:checked ~ #boxLabel span::after{
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+#box:checked ~ #boxLabel span::before{
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#drawerMenu{
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 40;
+    height: 100%;
+    transition: all 0.3s ease-in-out 0s;
+    transform: translateY(-100%);
+    width: 100%;
+    background-color:rgba(255, 255, 255, .9);
+    text-align: center;
+    color: #333333;
+    text-decoration: none;
+    padding-top:142px;
+}
+ 
+#drawerMenu li{
+    padding-top:0;
+    padding-bottom:48px;
+    font-size: 16px;
+}
+ /*チェックされた時の動作*/
+#box:checked ~ #drawerMenu {
+    transform: translateY(0);
+}
+
+@media screen and (min-width:769px){
+    header h1{
+        display:inline-block;/*nav要素と横並びになるように*/
+    }
+    header h1 img{
+        width: 400px;
+    }
+    header{
+        max-width:1400px;
+        margin:0 auto;
+        height: 72px;
+    }
+    #boxLabel{
+        display:none;
+    }
+    header .drawerContainer nav{
+        display:block;
+        background-color: rgba(255, 255, 255, 0);
+        padding-top: 30%;
+    }
+    header .drawerContainer{
+        position:relative;
+    }
+    #drawerMenu{
+        display:inline-block;
+        overflow: hidden;
+        position:absolute;
+        transition: none;
+        transform:translateY(50%);
+        width:50%;
+        padding-top: 8px;
+        height: auto;
+    
+    }
+    #drawerMenu ul{
+        max-width:632px;
+        display: flex;
+        justify-content:space-between;
+    }
+    #drawerMenu ul li{
+        font-size:16px;     
+        line-height: 1.0;
+        padding-top:0px;
+        padding-bottom:0px;
+    }
+    main {
+        margin-top: 0;
+    }
+    main .heroImage{
+        width:auto;
+        height:545px;
+        background: url(../images/hero2.png) no-repeat center/cover;
+    }
+    main section{
+        margin:160px 173px 0;
+    }
+    
+    main section h2{
+        font-size:42px;
+        font-weight:bold;
+        text-align: center;
+        margin-bottom: 19px;
+    }
+    
+    main section h2 span{
+        font-size:16px;
+        color: #223E69;
+    }
+    main section h2 span::before,
+    main section h2 span::after{
+        color: #223E69;
+        top: 14px;
+    }
+    main .service{
+        margin-top:160px;
+    }
+    main section article h3{
+        font-size:28px;
+        font-weight:500;
+    }
+    main section article p{
+        margin-top: 24px;
+        font-size:16px;
+        font-weight:normal;
+    }
+    .service > .flexBox {
+        width:1020px;
+        display:flex;
+        justify-content:space-between;
+    }
+    .flexBox article{
+        flex-basis: 300px;
+    }
+    .flexBox article img{
+        width:300px;
+    }
+    .flexBox article h3{
+        font-size: 24px;
+        font-weight: 500;
+        margin-top:16px;
+    }
+    .flexBox article p{
+        margin-top:16px;
+        font-size:16px;
+    }
+    .flow{
+        padding-top:48px;
+    }
+    .flow ol{
+        padding: 48px 223px;
+        display:flex;
+        justify-content: space-between;
+    }
+    .flow ol li{
+        width:60px;
+        height:280px;
+        padding:0 16px;
+        border-radius: 30px;
+        display:flex;
+        align-items: center;
+    }
+    .flow ol li p{
+        font-size:28px;
+        font-weight: medium;
+        line-height: 1.0;
+    }
+    .flow ol .arrowRed{
+        align-self: center;
+        width:30px;
+        height:60px;
+        clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }
+    /*faqのバッチの位置調整*/
+    .badge{
+        flex-basis: 3vw;
+        color:#ffffff;
+        font-weight:bold;
+        font-size: 36px;
+        line-height: 1.5;
+        padding-top: 3px;
+        padding-left: 5px;
+        width: 52px;
+        height: 52px;
+        border-radius:26px;
+    }    
+    .questionAndAnswer .badge{
+        margin-top:0px;
+        
+    }
+    .questionAndAnswer .answer{
+        margin-top:0px;
+    }
+    .questionAndAnswer .question,
+    .questionAndAnswer .answer{
+        flex-basis: 65vw;
+        font-size: 20px;
+        line-height: 1.5;
+        padding-top:12px;
+        margin-top:0;
+        margin-bottom:24px;
+    }
+    .questionAndAnswer{
+        max-width: 1020px;
+        margin:0 auto;
+    }
+    .contact{
+        padding-top:48px;
+        padding-bottom:48px;
+    }
+    .contact h2{
+        margin-bottom:48px;
+    }
+    .contact form{
+        width:75%;
+        margin:0 auto;
+        padding-top: 48px;
+        padding-bottom:48px;
+        background-color: rgba(255, 255, 255, .7);
+        display:flex;
+        flex-wrap:wrap;
+        align-items: center;
+        justify-content:center;
+    }
+
+    .contact form p{
+        font-size: 20px;
+        flex-basis:30%;
+        text-align:right;
+        margin-right: 8px;
+        margin-bottom:24px;
+    }
+    .contact form .badgeCaution{
+        font-size:16px;
+        margin-top:0px;
+        margin-left:8px;
+        padding-left:12px;
+        padding-right:12px;
+        letter-spacing: 0.1em;
+        border-radius:8px;
+    }
+    .contact form > input{
+        flex-basis:55%;
+        height:52px;
+        margin-bottom:24px;
+    }
+    .contact form .postNumber{
+        text-align: left;
+        display:inline-block;
+        flex-basis:55%;
+        margin-bottom: 24px;
+    }
+    .contact form .postNumber .postMark{
+        vertical-align: middle;
+    }
+    .contact form input[type="number"]{
+        height:52px;
+        width:40%;
+    }
+    .contact form .customerName,
+    .contact form .customerNameKana,
+    .contact form .customerTel{
+        width:25%;
+    }
+    .contact form .addressSpace{
+        flex-basis:30%;
+    }
+    .contact form > p:nth-of-type(8){
+        padding-right: 78px;
+        align-self:flex-start;
+    }
+    .contact form input[type="textarea"]{
+        margin-bottom:48px;
+        height: 208px;
+    }
+    .contact form button{
+        display:block;
+        width:300px;
+        font-size:20px;
+        font-weight: bold;
+        padding-top:18px;
+        margin:0 auto;
+    }
+    .contact form .radioBtnGroup{
+        display:inline-block;
+        width:55%;
+    }
+    .contact form .radioBtnGroup label{
+        width:20%;
+        float:left;
+        font-size: 20px;
+    }
+    footer{
+        padding-top:24px;
+        padding-bottom:24px;
+    }
+    footer p{
+        font-size:14px;
+    }
+}
+

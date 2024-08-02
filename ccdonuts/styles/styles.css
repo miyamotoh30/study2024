@@ -1,0 +1,382 @@
+@charset "utf-8";
+
+body{
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+
+/*ヘッダー部分のCSS*/
+header{
+    background-color: #EDE0D4;
+    width:100vw;
+    height:133px;
+}
+ul{
+    list-style: none;
+    padding:0;
+}
+.headerContainer{
+    width:375px;
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:12px;
+}
+.shoppingIcons ul{
+    display:flex;
+    justify-content: right;
+}
+.shoppingIcons ul li{
+    padding-right:12px;
+}
+.searchArea{
+    width: 375px;
+    margin:0 auto;
+}
+.searchForm{
+    flex-basis: 350px;
+}
+.searchBtn{
+    width:34px;
+    height:37px;
+    background: url(../images/search.svg) no-repeat center;
+    border:1px solid #7F5539;
+    margin-right:0;
+}
+.searchWord{
+    border:1px solid #7F5539;
+    width: 310px;
+    height: 37px;
+}
+/*ドロワーメニュー*/
+.headerMenu{
+    display:none;/* ドロワーメニューが開かれない間非表示 */
+}
+.drawerIcon{
+    width: 25px;
+    height:25px;
+}
+.bar{
+    display:block;
+    border-top:3px solid #7F5539;
+    margin-top: 5px;
+}
+
+/*フッター部分のCSS*/
+footer{
+    background-color: #EDE0D4;
+    width:100vw;
+    color: #7F5539;
+}
+.footerContainer{
+    width:375px;
+    margin:0 auto;    
+}
+.footerNav{
+    padding:12px;
+}
+.footerNav ul li{
+    margin-top:12px;
+    margin-left: 12px;
+    border-left:2px solid #7F5539;
+    padding-left:12px;
+    font-size:12px;
+}
+.footerNav ul li a{
+    color:#7F5539;
+}
+.snsNav ul{
+    display:flex;
+    justify-content: left;
+    margin-left:10px;
+}
+.snsNav ul li{
+    flex-basis: 52px;
+}
+.footerLogo{
+    text-align: right;
+    margin-right:12px;
+}
+.copyRight{
+    border-top: #7F5539 1px solid;
+    text-align: center;
+    padding-top:12px;
+    padding-bottom:12px;
+    font-size: 10px;
+}
+
+.username p{
+    font-size: 12px;
+}
+/*index.php main*/
+.information{
+    max-width: 375px;
+    margin:0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.newItem,.lifeWithDonuts,.allItems{
+    position:relative;
+    margin-top:20px;
+}
+.newItem,.lifeWithDonuts{
+    width:157px;
+    height:157px;
+    flex-basis: 157px;
+}
+.newItem h2,.lifeWithDonuts h2{
+    position:absolute;
+    top:0;
+    left:0;
+    margin:0;
+    width:100%;
+    height:100%;
+}
+.newBadge{
+    position: absolute;
+    top:4px;
+    left:4px;
+    background: #FF8877;
+    color:#ffffff;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    font-size:12px;
+    font-weight: bold;
+    padding-top:10px;
+    padding-left: 2px;
+}
+.itemname{
+    position:absolute;
+    bottom:4px;
+    right:4px;
+    font-size:12px;
+    font-weight: bold;
+    color:#ffffff;
+    margin:0;
+}
+.title{
+    position:absolute;
+    bottom:14px;
+    right:25px;
+    font-size:12px;
+    font-weight: bold;
+    color:#ffffff;
+    margin:0;
+}
+.allItems{
+    height: 83px;
+    width: 335px;
+    flex-basis: 335px;
+}
+.banerTitle{
+    position:absolute;
+    bottom:4px;
+    right:4px;
+    font-size:12px;
+    font-weight: bold;
+    color:#7F5539;
+    margin:0;
+}
+/*Pilosophy部分のCSS*/
+.philosophy{
+    max-width:375px;
+    margin-top: 20px;
+    color:#ffffff;
+    text-align: center;
+}
+.backgroundPhoto{
+    width:100%;
+    height:588px;
+    background: url(../images/shopInfo.png) no-repeat center;
+    padding-top:99px;
+}
+.backgroundPhoto h2{
+    font-size: 24px;
+    margin-bottom:20px;
+}
+.backgroundPhoto h3{
+    font-size: 16px;
+    margin-bottom:60px;
+}
+.backgroundPhoto .enText{
+    font-size: 20px;
+    margin-bottom:12px;
+}
+.backgroundPhoto .jpText{
+    font-size: 16px;
+}
+/*ランキング部分のCSS*/
+.ranking{
+    max-width: 375px;
+    margin:0 auto;
+}
+.ranking h2{
+    margin:31px auto 80px auto;
+    padding-bottom:12px;
+    border-bottom:#FFD233 2px solid;
+    width:140px;
+    font-size:20px;
+}
+.rankingContainer{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.rankingContainer article{
+    width: 157px;
+    flex-basis: 157px;
+    margin-top:20px;
+}
+.rankingNumber{
+    margin:0 auto 20px auto;
+    text-align: center;
+    background-color:#E8C2CA;
+    width:35px;
+    height:35px;
+}
+.topItem{
+    background-color: #FFD233;
+}
+.secondItem{
+    background-color: #CCCCCC;
+}
+.thirdItem{
+    background-color: #D27C2C;
+}
+
+.rankingPhoto{
+    width:157px;
+    height:157px;
+    margin-bottom:20px;
+}
+.rankingItem{
+    width:157px;
+    font-size:16px;
+    color:#7F5539;
+    margin-bottom: 20px;
+}
+.price{
+    margin-bottom: 20px;
+    color:#BF0000;
+}
+.buyItem{
+    margin-bottom: 20px;
+    background-color: #7F5539;
+    color:#ffffff;
+    font-size: 12px;
+    border: none;
+    width: 148px;
+    height: 36px;
+    margin:0 auto;
+}
+/*pcサイト*/
+@media screen and (min-width:769px){
+    /*ヘッダー部分のCSS*/
+    header{
+        height:182px;
+    }
+    .headerContainer{
+        width:inherit;
+        max-width: 1366px;
+        height: 118px;
+        padding:0;
+    }
+    .searchArea{
+        width:inherit;
+        background-color: #B392AC;
+        text-align: right;
+        padding-top:12px;
+        padding-bottom:12px;
+        padding-right:96px;
+    }
+    .searchBtn{
+        width:40px;
+        height:40px;
+    }
+    .searchWord{
+        width:320px;
+        height:40px;
+    }
+    .drawerIcon{
+        width: 50px;
+        height: 50px;
+        margin-left:96px;
+    }
+    .bar{
+        width:50px;
+        margin-top: 20px;
+    }
+    .headerContainer p{
+        width:87px;
+        height:78px;
+    }
+    .headerContainer p img{
+        width:100%;
+    }
+    .shoppingIcons{
+        margin-right: 96px;
+    }
+    .shoppingIcons ul li{
+        width:48px;
+        height: 54px;
+        margin-left: 40px;
+    }
+    .shoppingIcons ul li img{
+        height:100%;
+    }
+    /*フッター部分のCSS*/
+    footer{
+        width:100vw;
+        height:448px;
+    }
+    .footerContainer{
+        position:relative;
+        padding: 0;
+        margin:0;
+        width:100%;
+        height:396px;
+        max-width: 1366px;
+    }
+    .footerNav ul{
+        display:flex;
+        justify-content: space-between;
+        width: 510px;
+        margin-left: 96px;
+    }
+    .footerNav ul li{
+        font-size: 16px;
+        padding:12px;
+    }
+    .snsNav ul{
+        width:183px;
+        justify-content: space-between;
+        position:absolute;
+        left:47%;
+        bottom:40px;
+    }
+    .snsNav ul li{
+        width:32px;
+        height:32px;
+    }
+
+    .footerLogo{
+        width: 144px;
+        height:128px;
+        position:absolute;
+        bottom:144px;
+        left:49%;
+    }
+    .footerLogo img{
+        width:100%;
+    }
+    .copyRight{
+        font-size: 12px;
+    }
+}

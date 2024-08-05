@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/*パンくずリスト*/
+.breadclumb p{
+    font-size: 12px;
+    color:#7F5539;
+}
+.breadclumb p a{
+    text-decoration: none;
+    color:#7F5539;
+}
+/*商品一覧*/
+.container{
+    max-width: 375px;
+}
+.container > h1{
+    margin:31px auto 80px auto;
+    padding-bottom:12px;
+    border-bottom:#FFD233 2px solid;
+    width:80px;
+    font-size:20px;
+}
+.mainMenu{
+    max-width: 375px;
+    margin:0 auto;
+}
+.mainMenu h2{
+    margin:31px auto 80px auto;
+    padding-bottom:12px;
+    font-size:16px;
+    width:133px;
+    color:#7F5539;
+}
+.menuBox{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.menuBox article{
+    width: 157px;
+    flex-basis: 157px;
+    margin-top:20px;
+}
+.menuPhoto{
+    width:157px;
+    height:157px;
+    margin-bottom:20px;
+}
+.menuPhoto img{
+    width:100%;
+}
+.menuItem{
+    width:157px;
+    font-size:16px;
+    color:#7F5539;
+    margin-bottom: 20px;
+}
+.price{
+    margin-bottom: 20px;
+    color:#BF0000;
+}
+.buyItem{
+    margin-bottom: 20px;
+    background-color: #7F5539;
+    color:#ffffff;
+    font-size: 12px;
+    border: none;
+    width: 148px;
+    height: 36px;
+    margin:0 auto;
+}
+/*pcサイト*/
+@media screen and (min-width:769px){
+    .mainMenu,.container{
+        max-width:1366px;
+    }
+    .container > h1{
+        font-size: 32px;
+        width: 128px;
+        margin-top: 80px;
+        padding-bottom: 20px;
+    }
+    .mainMenu{
+        max-width:1366px;
+        padding:0 142px;
+    }
+    .mainMenu h2{
+        font-size:24px;
+        margin-top:80px;
+        width:191px;
+        text-align: center;
+    }
+    .mainMenu article{
+        margin-top: 120px;
+        width:320px;
+        flex-basis: 320px;
+    }
+    .menuPhoto{
+        margin-top:20px;
+        width:320px;
+        height:320px;
+    }
+    .menuPhoto img{
+        width:100%;
+    }
+    .menuItem,.price{
+        margin-top:20px;
+        width:100%;
+        font-size: 24px;
+    }
+    .buyItem{
+        margin-top:20px;
+        width: 260px;
+        height: 72px;
+        font-size: 20px;
+        padding:16px 60px;
+    }
+}

@@ -72,6 +72,7 @@ footer{
     background-color: #EDE0D4;
     width:100vw;
     color: #7F5539;
+    margin-top: 82px;
 }
 .footerContainer{
     width:375px;
@@ -114,6 +115,10 @@ footer{
     font-size: 12px;
 }
 /*index.php main*/
+.container{
+    max-width: 375px;
+    margin:0 auto;
+}
 .information{
     max-width: 375px;
     margin:0 auto;
@@ -238,6 +243,7 @@ footer{
     margin:0 auto 20px auto;
     text-align: center;
     background-color:#E8C2CA;
+    color:#ffffff;
     width:35px;
     height:35px;
 }
@@ -276,6 +282,7 @@ footer{
     height: 36px;
     margin:0 auto;
 }
+
 /*pcサイト*/
 @media screen and (min-width:769px){
     /*ヘッダー部分のCSS*/
@@ -378,5 +385,126 @@ footer{
     }
     .copyRight{
         font-size: 12px;
+    }
+    /*index.php main*/
+    .container{
+        max-width: 1366px;
+        margin:0 auto;
+        padding: 0;
+    }
+    .heroImage h1 img{
+        width:100%;
+    }
+    .information{
+        max-width:1366px;
+    }
+    .newItem,.lifeWithDonuts{
+        width:480px;
+        height:480px;
+        flex-basis: 480px;
+    }
+    .newItem img,.lifeWithDonuts img{
+        width:100%;
+    }
+    .newBadge{
+        width:140px;
+        height:140px;
+        top:8px;
+        left:8px;
+        font-size: 32px;
+        padding-top:48px;
+        padding-left:20px;
+    }
+    .itemname{
+        font-size: 36px;
+        bottom:12px;
+        right:12px;
+    }
+    .title{
+        font-size: 36px;
+        bottom:40px;
+        left:78px;
+    }
+    .allItems{
+        width:1040px;
+        height:257px;
+        flex-basis: 1040px;
+    }
+    .allItems img{
+        width:100%;
+    }
+    .banerTitle{
+        font-size: 36px;
+        right:24px;
+        bottom:24px;
+    }
+    .philosophy{
+        max-width: 1366px;
+    }
+    .backgroundPhoto{
+        max-width: 1366px;
+        background: url(../images/pcAbout.png) no-repeat center;
+    }
+    .backgroundPhoto h2{
+        margin-top:80px;
+        font-size: 36px;
+    }
+    .backgroundPhoto h3{
+        margin-top:20px;
+        font-size: 20px;
+    }
+    .enText,.jpText{
+        font-size: 24px;
+    }
+    .enText{
+        margin-top: 40px;
+    }
+    .jpText{
+        margin-top:20px;
+    }
+
+    .ranking{
+        max-width:1366px;
+    }
+    .ranking h2{
+        font-size: 32px;
+        width: 224px;
+        margin-top: 80px;
+        padding-bottom: 20px;
+    }
+    .rankingContainer{
+        max-width:1366px;
+        padding:0 142px;
+    }
+    .rankingContainer article{
+        margin-top: 120px;
+        width:320px;
+        flex-basis: 320px;
+    }
+    .rankingNumber{
+        width:60px;
+        height:60px;
+        font-size: 24px;
+        padding-top:8px;
+    }
+    .rankingPhoto{
+        margin-top:20px;
+        width:320px;
+        height:320px;
+    }
+    .rankingPhoto img{
+        width:100%;
+    }
+    .rankingItem,.price{
+        margin-top:20px;
+        width:100%;
+        font-size: 24px;
+    }
+    .buyItem{
+        margin-top:20px;
+        width: 260px;
+        height: 72px;
+        font-size: 20px;
+        padding:16px 60px;
     }
 }

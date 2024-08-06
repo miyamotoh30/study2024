@@ -1,5 +1,4 @@
 </body>
-<link rel="stylesheet" href="styles/styles.css">
 <footer>
     <div class="footerContainer">
         <nav class="footerNav">

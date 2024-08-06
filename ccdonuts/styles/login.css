@@ -1,0 +1,26 @@
+@charset "utf-8";
+.loginPage{
+    max-width:375px;
+}
+.loginPage h1{
+    border-bottom:2px solid #FFD233;
+}
+
+.inputForm{
+    margin:0 40px;
+    border: #F7D1CD 2px solid;
+    padding:20px 12px;
+}
+.inputForm p{
+    font-size: 12px;
+    color:#7F5539;
+}
+
+.membership{
+    margin:0 40px;
+    text-align:right;
+    font-size:12px;
+}
+.membership a{
+    color:#7F5539;
+}

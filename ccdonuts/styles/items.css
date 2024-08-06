@@ -12,6 +12,7 @@
 /*商品一覧*/
 .container{
     max-width: 375px;
+    margin:0 auto;
 }
 .container > h1{
     margin:31px auto 80px auto;
@@ -69,6 +70,104 @@
     height: 36px;
     margin:0 auto;
 }
+/*itemdetail.php*/
+.headerPhoto{
+    border-bottom: none;
+    margin:20px;
+}
+.headerPhoto img{
+    width:100%;
+}
+.descriptionBlock h2{
+    font-size: 16px;
+    color:#7F5539;
+    font-weight: bold;
+    margin-top:20px;
+}
+.description{
+    font-size: 16px;
+    color:#7F5539;
+    width:355px;
+    margin-top:20px;
+    padding:20px 0;
+    border-top:1px solid #7F5539;
+    border-bottom:1px solid #7F5539;
+}
+.formLayout{
+    display: flex;
+    max-width: 375px;
+    justify-content: left;
+    align-items: bottom;
+}
+.count{
+    margin-right:20px;
+    flex-basis: 96px;
+}
+.count input{
+    margin:0 4px;
+    width:56px;
+}
+.detailPageBtn{
+    flex-basis:160px;
+    margin: 0;
+}
+.favorite{
+    flex-basis:36px;
+    display:inline-block;
+    width:32px;
+    height:36px;
+    background-color: #ffffff;
+    border:#7F5539 1px solid;
+    margin-left:4px;
+}
+/*cart.php SP*/
+.itemCenter{
+    text-align:center;
+}
+.totalInformation{
+    margin:20px;
+    border: 2px solid #FFD233;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.totalInformation p{
+    font-size:16px;
+    color:#7F5539;
+    margin-bottom:20px;
+}
+.fontsRed{
+    color:#BF0000;
+}
+.confirmationBtn{
+    font-size: 12px;
+    color:#ffffff;
+    background-color: #BF0000;
+    width:148px;
+    padding-top:12px;
+    padding-bottom:12px;
+    border:none;
+}
+.itemInformation h3{
+    color:#7F5539;
+    font-size:16px;
+}
+.fontBold{
+    font-weight: bold;
+}
+.recalcBtn{
+    font-size: 12px;
+    padding:12px 52px;
+    border:none;
+    margin:20px auto;
+}
+.deleteLink a{
+    color:#000000;
+    font-size:12px;
+    text-decoration: underline;
+}
+.cartItem{
+    margin-bottom:40px;
+}
 /*pcサイト*/
 @media screen and (min-width:769px){
     .mainMenu,.container{
@@ -81,7 +180,6 @@
         padding-bottom: 20px;
     }
     .mainMenu{
-        max-width:1366px;
         padding:0 142px;
     }
     .mainMenu h2{
@@ -114,5 +212,103 @@
         height: 72px;
         font-size: 20px;
         padding:16px 60px;
+    }
+    /*itemdetail.php*/
+    .flexBox{
+        max-width:1200px;
+        margin:0 auto;
+        display:flex;
+        justify-content: center;
+    }
+    .photoBlock{
+        flex-basis:50%;
+        margin-right:40px;
+    }
+    .headerPhoto{
+        width: 540px;
+        height:540px;
+        margin-right:0;
+    }
+    .headerPhoto{
+        width:100%;
+    }
+    .descriptionBlock{
+        flex-basis: 45%;
+    }
+    .descriptionBlock h2{
+        font-size:24px;
+    }
+    .description{
+        width: 100%;
+        font-size: 24px;
+        padding:40px 21px 40px 4px;
+    }
+    .formLayout{
+        max-width:460px;
+        align-items:start;
+    }
+    .count{
+        flex-basis:112px;
+    }
+    .count input{
+        width:80px;
+        height:52px;
+    }
+    .favorite{
+        width: 52px;
+        height: 52px;
+    }
+    .detailPageBtn{
+        margin-top: 0;
+        height:52px;
+        padding-top:12px;
+    }
+    /*cart.php PC*/
+    .itemCenter{
+        text-align: inherit;/*PCサイトの時は中央寄せを解除する*/
+    }
+    .totalInformation{
+        text-align: center;
+    }
+    .totalInformation p{
+        font-size: 24px;
+    }
+    .confirmationBtn{
+        width:inherit;
+        padding:16px 60px;
+        font-size: 20px;
+    }
+    .cartPageSize{
+        width:335px;
+        height:335px;
+        margin:0 auto;
+    }
+    .itemPhoto{
+        flex-basis:30%;
+    }
+    .itemInformation{
+        flex-basis: 55%;
+        margin-left:3%;
+        border-bottom:1px solid #E6CCB2;
+    }
+    .itemInformation h3{
+        border-bottom:1px solid #E6CCB2;
+    }
+    .cartItem{
+        margin-bottom:80px;
+    }
+    .cartForm{
+        flex-basis:38%;
+    }
+    .recalcBtn{
+        padding:8px 50px;
+        font-size:20px;
+    }
+    .deleteLink{
+        margin-top:100px;
+        text-align: right;
+    }
+    .deleteLink a{
+        font-size: 20px;
     }
 }

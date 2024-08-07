@@ -11,7 +11,7 @@
                 <input type="submit" value="ログインする" class="loginBtn">
             </form>
         </div><!--inputForm-->
-        <p class="membership"><a href="#">会員登録はこちら</a></p>
+        <p class="linkAddress"><a href="#">会員登録はこちら</a></p>
     </section>
-</main>
-<?php require 'footer.php';?>
+    </main>
+    <?php require 'footer.php';?>

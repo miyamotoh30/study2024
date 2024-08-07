@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/items.css">
     <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/customer.css">
 </head>
 <body>
     <header>
@@ -40,6 +41,6 @@
             <form method="post" action="search.php" class="searchForm">
                 <input type="submit" value="" class="searchBtn">
                 <input type="text" name="word" class="searchWord">
-            <form>
+            </form>
         </div>
     </header>

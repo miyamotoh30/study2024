@@ -1,26 +1,59 @@
 @charset "utf-8";
-.loginPage{
+.loginPage,.loginResultPage{
     max-width:375px;
+    margin:0 auto;
 }
-.loginPage h1{
+.loginPage h1,.loginResultPage h1,.customerInfoPage h1{
     border-bottom:2px solid #FFD233;
+    padding-bottom: 12px;
+    margin:32px auto 20px auto;
+    font-size:20px;
 }
-
+.loginPage h1,.customerInfoPage h1{
+    width: 80px;
+}
+.loginResultPage h1{
+    width:120px;
+}
 .inputForm{
-    margin:0 40px;
+    margin:40px 40px 0 40px;
+    padding:20px 12px 40px 12px;
     border: #F7D1CD 2px solid;
-    padding:20px 12px;
 }
-.inputForm p{
+.inputForm p,
+.resultTextBox p{
+    margin-bottom:8px;
     font-size: 12px;
     color:#7F5539;
 }
-
-.membership{
+.inputForm input{
+    border:1px solid #7F5539;
+    width: 271px;
+    margin:0 0 20px;
+}
+.inputForm .loginBtn,
+.customerInfoPage .submitBtn{
+    text-align: center;
+    color:#ffffff;
+    background-color: #7F5539;
+    font-size: 16px;
+    width:160px;
+    padding:16px 32px;
+    border:none;
+    margin:40px auto 20px;
+}
+.linkAddress{
     margin:0 40px;
     text-align:right;
     font-size:12px;
 }
-.membership a{
+.linkAddress a{
     color:#7F5539;
+}
+.resultTextBox{
+    margin:40px 40px 0 40px;
+    padding-top:20px;
+    padding-bottom:20px;
+    border: #F7D1CD 2px solid;
+    text-align:center;
 }

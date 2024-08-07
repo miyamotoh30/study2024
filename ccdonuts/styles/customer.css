@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+.formInputList{
+    margin:20px 40px;
+}
+.formInputList dt{
+    color:#7F5539;
+    font-size:12px;
+    margin-bottom:0;
+}
+.formInputList dt span{
+    color:#FF0000;
+
+}
+.formInputList dd{
+    height:30px;
+}
+.formInputList dd input{
+    width:100%;
+    border: #7F5539 1px solid;
+    font-size:12px;
+}
+.formInputList dd input[name="postNumber1"],
+.formInputList dd input[name="postNumber2"]{
+    display:inline-block;
+    width:30%;
+}
+.formInputList > p{
+    font-size: 8px;
+    color:#FF0000;
+    margin-bottom:0;
+}
+.centerPosition{
+    text-align: center;
+}
+.formInputList dd p{
+    font-size: 12px;
+    color:#000000;
+    border-left: #7F5539 1px solid;
+    margin-top:12px;
+    padding-left:4px;
+}

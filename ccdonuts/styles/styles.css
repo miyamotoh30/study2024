@@ -392,7 +392,13 @@ footer{
         margin:0 auto;
         padding: 0;
     }
-    .heroImage h1 img{
+    .container > .headerHeroImage{
+        margin:0 auto;
+        max-width: 1366px;
+        border-bottom:none;
+        width:100%;
+    }
+    .headerHeroImage img{
         width:100%;
     }
     .information{
@@ -444,6 +450,7 @@ footer{
     .backgroundPhoto{
         max-width: 1366px;
         background: url(../images/pcAbout.png) no-repeat center;
+        margin:0 auto;
     }
     .backgroundPhoto h2{
         margin-top:80px;

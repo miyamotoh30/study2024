@@ -32,8 +32,8 @@
             <p><img src="images/shopLogo.svg" alt="logo"></p>
             <div class="shoppingIcons">
                 <ul>
-                    <li><a href="#"><img src="images/login.svg" alt="login"></a></li>
-                    <li><a href="#"><img src="images/cart.svg" alt="cart"></a></li>
+                    <li><a href="loginpage.php"><img src="images/login.svg" alt="login"></a></li>
+                    <li><a href="cart.php"><img src="images/cart.svg" alt="cart"></a></li>
                 </ul>
             </div>
         </div><!--headerContainer-->

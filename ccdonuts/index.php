@@ -1,12 +1,18 @@
+<?php session_start();?>
 <?php require 'header.php';?>
-<link rel="stylesheet" href="styles/styles.css">
 <main>
     <section class="username">
-        <p>ようこそ&nbsp;ゲスト様</p>
+<?php
+    if(!isset($_SESSION['customer'])){
+        echo '<p>ようこそ&nbsp;ゲスト様</p>';
+    }else{
+        echo '<p>ようこそ&nbsp;',$_SESSION['customer']['name'],'様</p>';
+    }
+?>
     </section>
     <section class="heroImage">
         <div class="container">
-            <h1><img srcset="images/heroImage.png 320w,images/pcHeroImage.png 1280w"
+            <h1 class="headerHeroImage"><img srcset="images/heroImage.png 320w,images/pcHeroImage.png 1280w"
              src="images/heroImage.png" alt="ccdonuts"></h1>
         </div><!--container-->
     </section>

@@ -1,55 +1,59 @@
 <?php require 'header.php';?>
 <main>
     <div class="breadclumb">
-        <p><a href="index.php">Top</a> > 商品一覧 </p>
+        <p><a href="index.php">Top</a> > カート </p>
     </div>
-    <div class="username">
-        <p>ようこそ&nbsp;ドーナッツ太郎様</p>
-    </div>
+<?php
+    if(!isset($_SESSION['customer'])){
+        echo '<p>ようこそ&nbsp;ゲスト様</p>';
+    }else{
+        echo '<p>ようこそ&nbsp;',$_SESSION['customer']['name'],'様</p>';
+    }
+?>
     <div class="container">
         <section class="totalInformation itemCenter">
-            <p>現在&nbsp;&nbsp;商品2点</p>
-            <p>ご注文小計：税込&nbsp;<span class="fontsRed">¥5,000</span></p>
-            <button class="confirmationBtn">購入確認へ進む</button>
+<?php
+    if(isset($_SESSION['totalcount'])&&isset($_SESSION['totalprice'])){
+            echo '<p>現在&nbsp;&nbsp;商品',$_SESSION['totalcount'],'点</p>';
+            echo '<p>ご注文小計：税込&nbsp;<span class="fontsRed">¥',$_SESSION['totalprice'],'</span></p>';
+            echo '<button class="confirmationBtn">購入確認へ進む</button>';
+    }
+?>
         </section>
-        <section>
-            <article class="cartItem flexBox">
-                <div class="itemPhoto">
-                    <h2 class="headerPhoto cartPageSize"><img src="images/ccdonuts.png" alt="ccdonuts"></h1>
-                </div>
-                <div class="itemInformation itemCenter">
-                    <h3>CCドーナツ 当店オリジナル（5個入り）</h3>
-                    <div class="flexBox">
-                        <p class="price">税込 &nbsp;&nbsp; ￥1,500</p>
-                        <div class="cartForm">
-                            <p class="count fontBold">数量<input type="text" name="count" value="1">個</p>
-                            <button class="recalcBtn">再計算</button>
-                            <p class="deleteLink"><a href="cart.php">削除する</a></p>
-                        </div>
-                    </div>
-                </div>
-            </article><!--flexBox-->
-            <article class="cartItem flexBox">
-                <div class="itemPhoto">
-                    <h2 class="headerPhoto cartPageSize"><img src="images/pcFruitsDonuts12.png" alt="FruitsDonutsSet"></h2>
-                </div>
-                <div class="itemInformation itemCenter">
-                    <h3>フルーツドーナツセット（12個入り）</h3>
-                    <div class="flexBox">
-                        <p class="price">税込&nbsp;&nbsp;￥3,500</p>
-                        <div class="cartForm">
-                            <p class="count fontBold">数量<input type="text" name="count" value="1">個</p>
-                            <button class="recalcBtn">再計算</button>
-                            <p class="deleteLink"><a href="cart.php">削除する</a></p>
-                        </div>
-                    </div>
-                </div><!--itemInformation-->
-            </article><!--flexBox-->
-        </section>
+<?php
+        echo '<section>';
+        if(!empty($_SESSION['product'])){
+            foreach($_SESSION['product'] as $id=>$product){
+                echo '<article class="cartItem flexBox">';
+                echo '<div class="itemPhoto">';
+                echo '<h2 class="headerPhoto cartPageSize"><img src="images/',$id,'donuts.png" alt="',$product['name'],'"></h2>';
+                echo '</div>';
+                echo '<div class="itemInformation itemCenter">';
+                echo '<h3>',$product['name'],'</h3>';
+                echo '<div class="flexBox">';
+                echo '<p class="price">税込 &nbsp;&nbsp; ￥',$product['price'],'</p>';
+                echo '<div class="cartForm">';
+                echo '<p class="count fontBold">数量<input type="text" name="count" value="',$product['count'],'">個</p>';
+                echo '<button class="recalcBtn">再計算</button>';
+                echo '<p class="deleteLink"><a href="deleteitem.php?id=',$id,'">削除する</a></p>';
+                echo '</div><!-- cartForm -->';
+                echo '</div><!-- flexBox -->';
+                echo '</div><!--itemInformation-->';
+                echo '</article><!--flexBox-->';
+            }
+        }else{
+            echo '<p>カートにアイテムがありません。</p>';
+        }
+        echo '</section>';
+?>
         <section class="totalInformation itemCenter">
-            <p>現在&nbsp;&nbsp;商品2点</p>
-            <p>ご注文小計：税込&nbsp;<span class="fontsRed">¥5,000</span></p>
-            <button class="confirmationBtn">購入確認へ進む</button>
+<?php
+    if(isset($_SESSION['totalcount'])&&isset($_SESSION['totalprice'])){
+            echo '<p>現在&nbsp;&nbsp;商品',$_SESSION['totalcount'],'点</p>';
+            echo '<p>ご注文小計：税込&nbsp;<span class="fontsRed">¥',$_SESSION['totalprice'],'</span></p>';
+            echo '<button class="confirmationBtn">購入確認へ進む</button>';
+    }
+?>
         </section>
     </div><!--container-->
 </main>

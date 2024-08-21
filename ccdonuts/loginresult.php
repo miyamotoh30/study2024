@@ -1,6 +1,7 @@
 <?php session_start();?>
 <?php require 'header.php';?>
 <main>
+<?php require 'customername.php';?>
     <section class="loginResultPage">
 <?php
     /*ログイン情報を初期化する*/

@@ -1,15 +1,8 @@
 <?php session_start();?>
 <?php require 'header.php';?>
 <main>
-    <div class="breadclumb">
-        <p><a href="index.php">Top</a> > 商品一覧 </p>
-    </div>
+<?php require 'customername.php';?>
 <?php
-    if(!isset($_SESSION['customer'])){
-        echo '<p>ようこそ&nbsp;ゲスト様</p>';
-    }else{
-        echo '<p>ようこそ&nbsp;',$_SESSION['customer']['name'],'様</p>';
-    }
     /*商品情報をDBから取得 */
     $pdo = new PDO('mysql:host=localhost;dbname=ccdonuts;charset=utf8','ccStaff','ccDonuts');
     $sql = $pdo->prepare('select * from products where id=?');

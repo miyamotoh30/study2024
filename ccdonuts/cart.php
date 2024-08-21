@@ -1,26 +1,16 @@
 <?php require 'header.php';?>
 <main>
-    <div class="breadclumb">
-        <p><a href="index.php">Top</a> > カート </p>
-    </div>
+<?php require 'customername.php';?>
 <?php
-    if(!isset($_SESSION['customer'])){
-        echo '<p>ようこそ&nbsp;ゲスト様</p>';
-    }else{
-        echo '<p>ようこそ&nbsp;',$_SESSION['customer']['name'],'様</p>';
-    }
-?>
-    <div class="container">
-        <section class="totalInformation itemCenter">
-<?php
+    echo '<div class="container">';
+
     if(isset($_SESSION['totalcount'])&&isset($_SESSION['totalprice'])){
+            echo '<section class="totalInformation itemCenter">';
             echo '<p>現在&nbsp;&nbsp;商品',$_SESSION['totalcount'],'点</p>';
             echo '<p>ご注文小計：税込&nbsp;<span class="fontsRed">¥',$_SESSION['totalprice'],'</span></p>';
             echo '<button class="confirmationBtn">購入確認へ進む</button>';
+            echo '</section>';
     }
-?>
-        </section>
-<?php
         echo '<section>';
         if(!empty($_SESSION['product'])){
             foreach($_SESSION['product'] as $id=>$product){
@@ -45,16 +35,14 @@
             echo '<p>カートにアイテムがありません。</p>';
         }
         echo '</section>';
-?>
-        <section class="totalInformation itemCenter">
-<?php
     if(isset($_SESSION['totalcount'])&&isset($_SESSION['totalprice'])){
+            echo '<section class="totalInformation itemCenter">';
             echo '<p>現在&nbsp;&nbsp;商品',$_SESSION['totalcount'],'点</p>';
             echo '<p>ご注文小計：税込&nbsp;<span class="fontsRed">¥',$_SESSION['totalprice'],'</span></p>';
             echo '<button class="confirmationBtn">購入確認へ進む</button>';
+            echo '</section>';
     }
+    echo '</div><!--container-->';
 ?>
-        </section>
-    </div><!--container-->
-</main>
+ </main>
 <?php require 'footer.php';?>

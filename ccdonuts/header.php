@@ -33,7 +33,7 @@
             <div class="shoppingIcons">
                 <ul>
                     <li><a href="loginpage.php"><img src="images/login.svg" alt="login"></a></li>
-                    <li><a href="cart.php"><img src="images/cart.svg" alt="cart"></a></li>
+                    <li><a href="cartpage.php"><img src="images/cart.svg" alt="cart"></a></li>
                 </ul>
             </div>
         </div><!--headerContainer-->

@@ -7,7 +7,7 @@
             <form action="confilm.php" method="post">
                 <dl class="formInputList">
 <?php
-if(!isset($_REQUEST['customerName'])||!isset($_REQUEST['customerNameKane'])||!isset($_REQUEST['address'])){
+if(empty($_REQUEST['customerName'])||empty($_REQUEST['customerNameKana'])||empty($_REQUEST['address'])){
     echo '<p>必須項目に未入力のものがあります。</p>';
 }else if(!preg_match('/^[0-9]{3}$/',$_REQUEST['postNumber1'])||!preg_match('/^[0-9]{4}$/',$_REQUEST['postNumber2'])){
     echo '<p>郵便番号が不正な値になっています。</p>';
@@ -15,7 +15,7 @@ if(!isset($_REQUEST['customerName'])||!isset($_REQUEST['customerNameKane'])||!is
     echo '<p>メールアドレスが正しくありません</p>';
 }else if($_REQUEST['mailAddress1']!=$_REQUEST['mailAddress2']){
     echo '<p>メールアドレスが一致しません</p>';
-}else if(!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,20}$/',$_REQUEST['password1'])||!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,20}$/',$_REQUEST['password2'])){
+}else if(!preg_match('/^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{8,20}$/',$_REQUEST['password1'])||!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,20}$/',$_REQUEST['password2'])){
     echo '<p>パスワードが条件を満たしていません</p>';
 }else if($_REQUEST['password1']!=$_REQUEST['password2']){
     echo '<p>パスワードが一致していません。</p>';
@@ -59,11 +59,12 @@ if(!isset($_REQUEST['customerName'])||!isset($_REQUEST['customerNameKane'])||!is
         'mailAddress'=>$mailAddress1,
         'password'=>$password1
     ];
+    echo '</dl>';
+    echo '<div class="centerPosition"><input type="submit" value="登録する" class="submitBtn"></div>';
+    echo '</form>';
 }
 ?>
-                </dl>
-                <div class="centerPosition"><input type="submit" value="登録する" class="submitBtn"></div>
-            </form>
+                
         </div>
     </section>
 </main>

@@ -1,5 +1,7 @@
+<?php session_start();?>
 <?php require 'header.php';?>
 <main>
+<?php require 'customername.php';?>
     <section class="loginPage">
     <h1>ログイン</h1>
         <div class="inputForm">

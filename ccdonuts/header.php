@@ -8,25 +8,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/items.css">
-    <link rel="stylesheet" href="styles/login.css">
-    <link rel="stylesheet" href="styles/customer.css">
 </head>
 <body>
     <header>
         <div class="headerContainer">
             <nav>
-                <div class="drawerIcon">
-                    <span class="bar">
-                    <span class="bar">
-                    <span class="bar">
+                <div class="drawerIcon" id="openBtn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
-                <ul class="headerMenu">
+                <ul class="headerMenu" id="headerMenu">
+                    <div><img src="images/shopLogo.svg" alt="logo"></div>
+                    <div class="closeBtnIcon" id="closeBtn">
+                        <span class="topbar"></span>
+                        <span class="bottombar"></span>
+                    </div>
                     <li><a href="index.php">TOP</a></li>
-                    <li><a href="allitem.php">商品一覧</a></li>
-                    <li><a href="faq.php">よくある質問</a></li>
-                    <li><a href="contact.php">問い合わせ</a></li>
-                    <li><a href="policy.php">当サイトのポリシー</a></li>
+                    <li><a href="allitems.php">商品一覧</a></li>
+                    <li><a href="#">よくある質問</a></li>
+                    <li><a href="#">問い合わせ</a></li>
+                    <li><a href="#">当サイトのポリシー</a></li>
                 </ul>
             </nav>
             <p><img src="images/shopLogo.svg" alt="logo"></p>

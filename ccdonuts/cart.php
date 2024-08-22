@@ -4,7 +4,8 @@
 <?php
     echo '<div class="container">';
 
-    if(isset($_SESSION['totalcount'])&&isset($_SESSION['totalprice'])){
+    if(isset($_SESSION['totalcount'])&&isset($_SESSION['totalprice'])
+    &&$_SESSION['totalcount']!==0 && $_SESSION['totalprice']!==0 ){
             echo '<section class="totalInformation itemCenter">';
             echo '<p>現在&nbsp;&nbsp;商品',$_SESSION['totalcount'],'点</p>';
             echo '<p>ご注文小計：税込&nbsp;<span class="fontsRed">¥',$_SESSION['totalprice'],'</span></p>';
@@ -32,10 +33,13 @@
                 echo '</article><!--flexBox-->';
             }
         }else{
+            echo '<section class="totalInformation itemCenter">';
             echo '<p>カートにアイテムがありません。</p>';
+            echo '</section>';
         }
         echo '</section>';
-    if(isset($_SESSION['totalcount'])&&isset($_SESSION['totalprice'])){
+    if(isset($_SESSION['totalcount'])&&isset($_SESSION['totalprice'])
+    &&$_SESSION['totalcount']!==0 && $_SESSION['totalprice']!==0 ){
             echo '<section class="totalInformation itemCenter">';
             echo '<p>現在&nbsp;&nbsp;商品',$_SESSION['totalcount'],'点</p>';
             echo '<p>ご注文小計：税込&nbsp;<span class="fontsRed">¥',$_SESSION['totalprice'],'</span></p>';

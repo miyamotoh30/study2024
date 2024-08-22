@@ -55,9 +55,27 @@ ul{
 }
 /*ドロワーメニュー*/
 .headerMenu{
-    display:none;/* ドロワーメニューが開かれない間非表示 */
+    position:fixed;/*位置は固定*/
+    left:-100vw;/*左方向に隠しておく*/
+    top:0;
+    z-index: 100;
+    width:100vw;
+    height:100vh;
+    background:rgba(127, 85, 57, 0.75);
+    transition: all 1s ease;
+    padding-top:80px;
+
 }
-.drawerIcon{
+.headerMenu li{
+    padding:12px 16px;
+    text-align:left;
+    border-bottom: #ffffff solid 1px;
+}
+.headerMenu li a{
+    color:#ffffff;
+    font-size: 12px;
+}
+.drawerIcon,.closeBtnIcon{
     width: 25px;
     height:25px;
 }
@@ -66,7 +84,40 @@ ul{
     border-top:3px solid #7F5539;
     margin-top: 5px;
 }
-
+.closeBtnIcon{
+    position:absolute;
+    top:8px;
+    right: 8px;
+}
+.topbar,.bottombar{
+    display:block;
+    border-top:2px solid #ffffff;
+    transform-origin: center;
+}
+.topbar{
+    margin-top:17px;
+    transform:rotate(45deg);
+}
+.bottombar{
+    margin-top:-2px;
+    transform:rotate(-45deg);
+}
+.headerMenu div img{
+    position:absolute;
+    top: 8px;
+    left:8px;
+}
+/*ユーザ名表示*/
+.customerName{
+    padding-top:12px;
+    padding-bottom:12px;
+    padding-left: 20px;
+}
+.customerName > p{
+    font-size: 12px;
+    color: #7F5539;
+    margin-bottom:0;
+}
 /*フッター部分のCSS*/
 footer{
     background-color: #EDE0D4;
@@ -300,7 +351,270 @@ footer{
     height: 36px;
     margin:0 auto 20px;
 }
+/*パンくずリスト*/
+/*ユーザ名表示*/
+.customerName{
+    border-bottom: #cccccc 1px solid;
+    border-top: #cccccc 1px solid;
+}
 
+.breadclumb p,
+.customerName p{
+    font-size: 12px;
+    color:#7F5539;
+    margin-bottom:12px;
+    margin-top:12px;
+    margin-left:20px;
+}
+.breadclumb p a{
+    text-decoration: none;
+    color:#7F5539;
+}
+/*商品一覧*/
+.container{
+    max-width: 375px;
+    margin:0 auto;
+}
+.container > h1{
+    margin:31px auto 80px auto;
+    padding-bottom:12px;
+    border-bottom:#FFD233 2px solid;
+    width:80px;
+    font-size:20px;
+}
+.mainMenu{
+    max-width: 375px;
+    margin:0 auto;
+}
+.mainMenu h2{
+    margin:31px auto 80px auto;
+    padding-bottom:12px;
+    font-size:16px;
+    width:133px;
+    color:#7F5539;
+}
+.menuBox{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.menuBox article{
+    width: 157px;
+    flex-basis: 157px;
+    margin-top:20px;
+}
+.menuPhoto{
+    width:157px;
+    height:157px;
+    margin-bottom:20px;
+}
+.menuPhoto img{
+    width:100%;
+}
+.menuItem{
+    width:157px;
+    font-size:16px;
+    color:#7F5539;
+    margin-bottom: 20px;
+}
+.price{
+    margin-bottom: 20px;
+    color:#BF0000;
+}
+/*itemdetail.php*/
+.headerPhoto{
+    border-bottom: none;
+    margin:20px;
+}
+.headerPhoto img{
+    width:100%;
+}
+.descriptionBlock h2{
+    font-size: 16px;
+    color:#7F5539;
+    font-weight: bold;
+    margin-top:20px;
+}
+.description{
+    font-size: 16px;
+    color:#7F5539;
+    width:355px;
+    margin-top:20px;
+    padding:20px 0;
+    border-top:1px solid #7F5539;
+    border-bottom:1px solid #7F5539;
+}
+.formLayout{
+    display: flex;
+    max-width: 375px;
+    justify-content: left;
+    align-items: bottom;
+}
+.count{
+    margin-right:20px;
+    flex-basis: 96px;
+    margin:0 4px;
+    width:56px;
+}
+.detailPageBtn{
+    flex-basis:160px;
+    margin: 0;
+}
+.favorite{
+    flex-basis:36px;
+    display:inline-block;
+    width:32px;
+    height:36px;
+    background-color: #ffffff;
+    border:#7F5539 1px solid;
+    margin-left:4px;
+}
+/*cart.php SP*/
+.itemCenter{
+    text-align:center;
+}
+.totalInformation{
+    margin:20px;
+    border: 2px solid #FFD233;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.totalInformation p{
+    font-size:16px;
+    color:#7F5539;
+    margin-bottom:20px;
+}
+.fontsRed{
+    color:#BF0000;
+}
+.confirmationBtn{
+    font-size: 12px;
+    color:#ffffff;
+    background-color: #BF0000;
+    width:148px;
+    padding-top:12px;
+    padding-bottom:12px;
+    border:none;
+}
+.itemInformation h3{
+    color:#7F5539;
+    font-size:16px;
+}
+.fontBold{
+    font-weight: bold;
+}
+.recalcBtn{
+    font-size: 12px;
+    padding:12px 52px;
+    border:none;
+    margin:20px auto;
+}
+.deleteLink a{
+    color:#000000;
+    font-size:12px;
+    text-decoration: underline;
+}
+.cartItem{
+    margin-bottom:40px;
+}
+.loginPage,.loginResultPage{
+    max-width:375px;
+    margin:0 auto;
+}
+.loginPage h1,.loginResultPage h1,.customerInfoPage h1{
+    border-bottom:2px solid #FFD233;
+    padding-bottom: 12px;
+    margin:32px auto 20px auto;
+    font-size:20px;
+}
+.loginPage h1,.customerInfoPage h1{
+    width: 80px;
+}
+.loginResultPage h1{
+    width:120px;
+}
+.inputForm{
+    margin:40px 40px 0 40px;
+    padding:20px 12px 40px 12px;
+    border: #F7D1CD 2px solid;
+}
+.inputForm p,
+.resultTextBox p{
+    margin-bottom:8px;
+    font-size: 12px;
+    color:#7F5539;
+}
+.inputForm input{
+    border:1px solid #7F5539;
+    width: 271px;
+    margin:0 0 20px;
+}
+.inputForm .loginBtn,
+.customerInfoPage .submitBtn{
+    text-align: center;
+    color:#ffffff;
+    background-color: #7F5539;
+    font-size: 16px;
+    width:160px;
+    padding:16px 32px;
+    border:none;
+    margin:40px auto 20px;
+}
+.linkAddress{
+    margin:0 40px;
+    text-align:right;
+    font-size:12px;
+}
+.linkAddress a{
+    color:#7F5539;
+}
+.resultTextBox{
+    margin:40px 40px 0 40px;
+    padding-top:20px;
+    padding-bottom:20px;
+    border: #F7D1CD 2px solid;
+    text-align:center;
+}
+.formInputList{
+    margin:20px 40px;
+}
+.formInputList dt{
+    color:#7F5539;
+    font-size:12px;
+    margin-bottom:0;
+}
+.formInputList dt span{
+    color:#FF0000;
+
+}
+.formInputList dd{
+    height:30px;
+}
+.formInputList dd input{
+    width:100%;
+    border: #7F5539 1px solid;
+    font-size:12px;
+}
+.formInputList dd input[name="postNumber1"],
+.formInputList dd input[name="postNumber2"]{
+    display:inline-block;
+    width:30%;
+}
+.formInputList > p{
+    font-size: 8px;
+    color:#FF0000;
+    margin-bottom:0;
+}
+.centerPosition{
+    text-align: center;
+}
+.formInputList dd p{
+    font-size: 12px;
+    color:#000000;
+    border-left: #7F5539 1px solid;
+    margin-top:12px;
+    padding-left:4px;
+}
 /*pcサイト*/
 @media screen and (min-width:769px){
     /*ヘッダー部分のCSS*/
@@ -355,6 +669,33 @@ footer{
     }
     .shoppingIcons ul li img{
         height:100%;
+    }
+    /*ドロワーメニュー*/
+    .closeBtnIcon{
+        width: 54px;
+        height:54px;
+        right:12px;
+        top:12px;
+    }
+    .headerMenu{
+        width:583px;
+        padding-top:200px;
+    }
+    .headerMenu div img{
+        top:12px;
+        left:103px;
+        width: 87px;
+        height:87px;
+    }
+    .headerMenu li{
+        width:400px;
+        margin:0 auto;
+        padding-top:20px;
+        padding-bottom:20px;
+        padding-left: 0;
+    }
+    .headerMenu li a{
+        font-size: 24px;
     }
     /*フッター部分のCSS*/
     footer{
@@ -538,5 +879,146 @@ footer{
         height: 72px;
         font-size: 20px;
         padding:16px 60px;
+    }
+    .mainMenu,.container{
+        max-width:1366px;
+    }
+    .container > h1{
+        font-size: 32px;
+        width: 128px;
+        margin-top: 80px;
+        padding-bottom: 20px;
+    }
+    .mainMenu{
+        padding:0 142px;
+    }
+    .mainMenu h2{
+        font-size:24px;
+        margin-top:80px;
+        width:191px;
+        text-align: center;
+    }
+    .mainMenu article{
+        margin-top: 120px;
+        width:320px;
+        flex-basis: 320px;
+    }
+    .menuPhoto{
+        margin-top:20px;
+        width:320px;
+        height:320px;
+    }
+    .menuPhoto img{
+        width:100%;
+    }
+    .menuItem,.price{
+        margin-top:20px;
+        width:100%;
+        font-size: 24px;
+    }
+    /*
+    .buyItem{
+        margin-top:20px;
+        width: 260px;
+        height: 72px;
+        font-size: 20px;
+        padding:16px 60px;
+    }*/
+    /*itemdetail.php*/
+    .flexBox{
+        max-width:1200px;
+        margin:0 auto;
+        display:flex;
+        justify-content: center;
+    }
+    .photoBlock{
+        flex-basis:50%;
+        margin-right:40px;
+    }
+    .headerPhoto{
+        width: 540px;
+        height:540px;
+        margin-right:0;
+    }
+    /*
+    .headerPhoto > img{
+        width:100%;
+    }*/
+    .descriptionBlock{
+        flex-basis: 45%;
+    }
+    .descriptionBlock h2{
+        font-size:24px;
+    }
+    .description{
+        width: 100%;
+        font-size: 24px;
+        padding:40px 21px 40px 4px;
+    }
+    .formLayout{
+        max-width:460px;
+        align-items:start;
+    }
+    .count{
+        flex-basis:112px;
+        width:80px;
+        height:52px;
+    }
+    .favorite{
+        width: 52px;
+        height: 52px;
+    }
+    .detailPageBtn{
+        margin-top: 0;
+        height:52px;
+        padding-top:12px;
+    }
+    /*cart.php PC*/
+    .itemCenter{
+        text-align: inherit;/*PCサイトの時は中央寄せを解除する*/
+    }
+    .totalInformation{
+        text-align: center;
+    }
+    .totalInformation p{
+        font-size: 24px;
+    }
+    .confirmationBtn{
+        width:inherit;
+        padding:16px 60px;
+        font-size: 20px;
+    }
+    .cartPageSize{
+        width:335px;
+        height:335px;
+        margin:0 auto;
+    }
+    .itemPhoto{
+        flex-basis:30%;
+    }
+    .itemInformation{
+        flex-basis: 55%;
+        margin-left:3%;
+        border-bottom:1px solid #E6CCB2;
+    }
+    .itemInformation h3{
+        border-bottom:1px solid #E6CCB2;
+    }
+    .cartItem{
+        margin-bottom:80px;
+    }
+    .cartForm{
+        flex-basis:38%;
+    }
+    .recalcBtn{
+        padding:8px 50px;
+        font-size:20px;
+    }
+    .deleteLink{
+        margin-top:100px;
+        text-align: right;
+    }
+    .deleteLink a{
+        font-size: 20px;
     }
 }

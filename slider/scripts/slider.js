@@ -1,54 +1,34 @@
-'use strict';
+'use stricts';
 
-const leftPosition = ['position1','position2','position3','position4','position5'];
-let counter=0;
+let center = 1;/* 中心を管理する値 */
+let sliderBox = document.getElementById('sliderBox');
+const list = sliderBox.getElementsByTagName('li');
+const pointerList = document.getElementById('pointerList');
 
-/* prevボタンが押された時 */
-let prevButton = document.getElementById('prev');
-prevButton.addEventListener('click',function(){
-    counter--;/* count*/
-    let position = counter%leftPosition.length;
-    clickPrevEvent(position);
+document.getElementById('leftArrow').addEventListener('click',function(){
+    console.log('左');
+    center++;
+    if(center >= list.length){
+        center = 0;
+    }
+        let position = center * -100;
+        sliderBox.style.marginLeft= `${position}px`;
 });
 
-/* backボタンが押された時*/
-let backButton = document.getElementById('back');
-backButton.addEventListener('click',function(){
-    counter++;/* count*/
-    let position = counter%leftPosition.length;
-    clickBackEvent(position);
+document.getElementById('rightArrow').addEventListener('click',function(){
+    console.log('右');
+    center--;
+    if(center < 0){
+        center = list.length - 1;
+    }
+    let position = center * -100;
+    sliderBox.style.marginLeft= `${position}px`;
 });
 
-function clickBackEvent(position){
-    for(let i=0;i<leftPosition.length;i++){
-        let slider=document.getElementsByClassName('slider'+(i+1))[0];
-        let now=getPosition(position,i-1);/* 動く前のポジションを取得*/
-        let next=getPosition(position,i);/* 動く先のポジションを取得*/
-        slider.classList.remove(now);
-        slider.classList.add(next);
-    }
-}
-
-
-function clickPrevEvent(position){
-    for(let i=0;i<leftPosition.length;i++){
-        let slider=document.getElementsByClassName('slider'+(i+1))[0];
-        let now=getPosition(position,i+1);/* 動く前のポジションを取得*/
-        let next=getPosition(position,i);/* 動く先のポジションを取得*/
-        slider.classList.remove(now);
-        slider.classList.add(next);
-    }
-}
-
-
-function getPosition(position,num){
-    let positionClassName;
-    if((position+num<leftPosition.length) && (position+num >= 0)){
-        positionClassName=`${leftPosition[position+num]}`;
-    }else if(position+num < 0){
-        positionClassName=`${leftPosition[position+num+leftPosition.length]}`;
-    }else{
-        positionClassName=`${leftPosition[position+num-leftPosition.length]}`;
-    }
-    return positionClassName;
-}
+Array.from(pointerList.getElementsByTagName('li')).forEach(function(pointer,index){
+    pointer.addEventListener('click',function(){
+        console.log(index);
+        center = index;
+        sliderBox.style.marginLeft = `${center*-100}px`;
+    });
+});

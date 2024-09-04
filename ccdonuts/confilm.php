@@ -1,9 +1,10 @@
 <?php session_start();?>
+<?php require 'app/database.php';?>
 <?php require 'header.php';?>
 <main>
 <?php
 if(isset($_SESSION['customer'])){
-    $pdo = new PDO('mysql:host=localhost;dbname=ccdonuts;charset=utf8','ccStaff','ccDonuts');
+    $pdo = new PDO(DBNAME,DBUSER,DBPASSWORD);
     $sql = $pdo->prepare('select * from customers where mail=?');
     $sql->execute([$_SESSION['customer']['mailAddress']]);
     if(!empty($sql->fetchAll())){

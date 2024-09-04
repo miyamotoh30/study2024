@@ -1,10 +1,11 @@
 <?php session_start();?>
+<?php require 'app/database.php';?>
 <?php require 'header.php';?>
 <main>
 <?php require 'customername.php';?>
 <?php
     /*商品情報をDBから取得 */
-    $pdo = new PDO('mysql:host=localhost;dbname=ccdonuts;charset=utf8','ccStaff','ccDonuts');
+    $pdo = new PDO(DBNAME,DBUSER,DBPASSWORD);
     $sql = $pdo->prepare('select * from products where id=?');
     if(isset($_REQUEST['id'])){
         $sql->execute([htmlspecialchars($_REQUEST['id'])]);

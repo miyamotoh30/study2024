@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php require 'app/database.php';?>
 <?php require 'header.php';?>
 <main>
 <?php require 'customername.php';?>
@@ -30,7 +31,7 @@
             echo '</section>';
         }
         /*データベースから顧客情報を取得 */
-        $pdo = new PDO('mysql:host=localhost;dbname=ccdonuts;charset=utf8','ccStaff','ccDonuts');
+        $pdo = new PDO(DBNAME,DBUSER,DBPASSWORD);
         $sql = $pdo->prepare('select * from customers where name = ?');
         $sql->execute([$_SESSION['customer']['name']]);
         foreach($sql as $row){

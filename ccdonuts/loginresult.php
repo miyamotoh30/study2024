@@ -1,4 +1,5 @@
 <?php session_start();?>
+<?php require 'app/database.php';?>
 <?php require 'header.php';?>
 <main>
 <?php
@@ -8,7 +9,7 @@
         echo '<p>メールアドレスもしくはパスワードが未入力です</p>';
     }
     /* DB処理*/
-    $pdo = new PDO('mysql:host=localhost;dbname=ccdonuts;charset=utf8','ccStaff','ccDonuts');
+    $pdo = new PDO(DBNAME,DBUSER,DBPASSWORD);
     $sql = $pdo->prepare('select * from customers where mail=? and password=?');
     $sql->execute([$_REQUEST['mail'],$_REQUEST['password']]);
     foreach($sql as $row){

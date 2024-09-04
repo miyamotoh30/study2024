@@ -15,7 +15,7 @@ if(empty($_REQUEST['customerName'])||empty($_REQUEST['customerNameKana'])||empty
     echo '<p>メールアドレスが正しくありません</p>';
 }else if($_REQUEST['mailAddress1']!=$_REQUEST['mailAddress2']){
     echo '<p>メールアドレスが一致しません</p>';
-}else if(!preg_match('/^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{8,20}$/',$_REQUEST['password1'])||!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,20}$/',$_REQUEST['password2'])){
+}else if(!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,20}$/',$_REQUEST['password1'])||!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,20}$/',$_REQUEST['password2'])){
     echo '<p>パスワードが条件を満たしていません</p>';
 }else if($_REQUEST['password1']!=$_REQUEST['password2']){
     echo '<p>パスワードが一致していません。</p>';

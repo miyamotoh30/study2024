@@ -1,5 +1,4 @@
 <?php require 'header.php';?>
-<link rel="stylesheet" href="styles/items.css">
 <main>
 <?php require 'customername.php';?>
 <div class="container">

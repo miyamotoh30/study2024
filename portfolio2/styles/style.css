@@ -1,0 +1,135 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Helvetica",sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333333;
+    letter-spacing: 2.0;
+}
+a{
+    text-decoration: none;
+    color:blueviolet;
+}
+header{
+    background: rgba(255,255,255,0.7);
+    text-align: center;
+    position:relative;
+}
+.return{
+    position:absolute;
+    top:0.5em;
+    right:0.5em;
+}
+h1{
+    font-size:1.5em;
+    background:linear-gradient(-45deg,pink,blueviolet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip:text;
+    margin-top:12px;
+    margin-bottom: 12px;
+}
+main section{
+    z-index:-1;
+    background:linear-gradient(-45deg,pink,blueviolet);
+    width:100vw;
+    padding-top:24px;
+    padding-bottom: 24px;
+}
+main section article{
+    width:80%;
+    margin:12px auto 32px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 12px;
+    padding-top:24px;
+}
+main section article h2{
+    width:80%;
+    margin:0 auto;
+}
+main section article h2 img{
+    width:100%;
+}
+main section article dl{
+    width:85%;
+    margin:12px auto 0;
+}
+main section article dl dt{
+    display:inline-block;
+    width: 30%;
+    margin-right:2%;
+    border-bottom: 1px dotted #333333;
+}
+main section article dl dd{
+    display:inline-block;
+    width: 65%;
+    border-bottom: 1px dotted #333333;
+}
+.triangle{
+    display:inline-block;
+    width:0.8em;
+    height:1em;
+    background-color:blueviolet;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    margin-left: 0.5em;
+}
+.arrowBack{
+    position: fixed;
+    bottom:3vw;
+    right:3vw;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    width: 4.5em;
+    height: 4.5em;
+    text-align: center;
+    padding-top:0.7em;
+
+}
+.arrow{
+    display: inline-block;
+    vertical-align: middle;
+    color:#fff;
+    line-height: 1;
+    width: 3em;
+    height: 3em;
+    border: 0.3em solid blueviolet;
+    border-left: 0;
+    border-bottom: 0;
+    box-sizing: border-box;
+    transform: translateY(25%) rotate(-45deg);
+}
+footer{
+    background-color: pink;
+    margin:0 auto;
+}
+footer p{
+    padding:1em;
+    text-align: center;
+    margin-bottom:0;
+}
+
+@media screen and (min-width:769px){
+    body{
+        font-size:24px;
+    }
+    h1{
+        font-size:2em;
+        padding:24px;
+    }
+    main section article{
+        display:flex;
+        justify-content: space-between;
+        width:70%;
+        padding:24px;
+    }
+    main section article h2{
+        width:40%;
+    }
+    main section article dl{
+        width:50%;
+        align-items: center;
+    }
+    
+}

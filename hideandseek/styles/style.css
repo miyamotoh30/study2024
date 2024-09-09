@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+header{
+    position:fixed;
+    z-index: 50;
+    color:#fff;
+}
+h2{
+    position:fixed;
+    z-index: 51;
+    top:10em;
+    color:#fff;
+}
+
+.bgForest{
+    background: url(../images/forest.jpg) no-repeat center;
+    position: relative;
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+    top:0;
+}
+
+.penguin{
+    position: absolute;
+    width:80px;
+    height:100px;
+}
+.rock{
+    position:absolute;
+    width:220px;
+    height:auto;
+}
+.penguin img{
+    width:100%;
+}
+.rock img{
+    width:100%;
+}
+
+.first{
+    bottom:0;
+    left:25%;
+    animation:hideandseek 10s ease-in-out;
+}
+.second{
+    bottom:0;
+    left:50%;
+}
+.thread{
+    bottom:0;
+    left:75%;
+}
+
+.firstrock{
+    bottom:-10%;
+    left:20%;
+}
+.secondrock{
+    bottom:-10%;
+    left:45%;
+}
+.threadrock{
+    bottom:-10%;
+    left:70%;
+}
+
+/*animation*/
+@keyframes hideandseek {
+    0%{
+        bottom: 0px;
+    }
+    50%{
+        bottom:10%;
+    }
+    100%{
+        bottom:0px;
+    }
+}

@@ -10,66 +10,51 @@ body{
     margin:0 auto;
     height:300px;
     position:relative;
-    z-index: 20;
-    border:3px solid #000000;
+    background-color: #000000;
 }
 
-.slider0,.slider1,.slider2,.slider3,.slider4,.slider5,.slider6{
+.slider1,.slider2,.slider3,.slider4,.slider5{
     width:100px;
     height:100px;
-    border:1px solid #ffffff;
+    border:1px solid #000000;
     background-color: #333333;
     color:#ffffff;
     position:absolute;
     top: 50px;
-    transition:left 2S ease-in-out;
 }
 
 .slider1{
-    background-color: #fff;
-}
-.slider1{
-    background-color: #ddd;
-}
-.slider2{
     background-color: #ccc;
 }
-.slider3{
+.slider2{
     background-color: #aaa;
 }
-.slider4{
+.slider3{
     background-color: #888;
+}
+.slider4{
+    background-color: #555;
 
 }
 .slider5{
-    background-color: #666;
-}
-.slider6{
-    background-color: #888;
-}
-.position0{
-    left:0;
-    opacity:0;
+    background-color: #333;
 }
 .position1{
-    left: 120px;
+    left:0;
 }
 .position2{
-    left:240px;
+    left:120px;
 }
 .position3{
-    left:360px;
+    left:240px;
 }
 .position4{
-    left:480px;
+    left:360px;
 }
 .position5{
-    left: 600px;
+    left: 480px;
 }
-.position6{
-    left: 720px;
-    opacity:0;
-}
+
 
 #prev{
     background-image: url(../images/leftArrow.svg);

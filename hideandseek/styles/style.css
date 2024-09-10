@@ -26,6 +26,9 @@ h2{
     width:80px;
     height:100px;
 }
+.penguin:hover{
+    cursor: pointer;
+}
 .rock{
     position:absolute;
     width:220px;
@@ -41,37 +44,49 @@ h2{
 .first{
     bottom:0;
     left:25%;
-    animation:hideandseek 10s ease-in-out;
+    animation:hideandseek 3s ease-in-out;
 }
 .second{
     bottom:0;
     left:50%;
+    animation:hideandseek 5s ease-in-out;
 }
 .thread{
     bottom:0;
     left:75%;
+    animation:hideandseek 2s ease-in-out;
 }
 
 .firstrock{
     bottom:-10%;
-    left:20%;
+    left:17%;
 }
 .secondrock{
     bottom:-10%;
-    left:45%;
+    left:43%;
 }
 .threadrock{
     bottom:-10%;
-    left:70%;
+    left:68%;
 }
-
+#clearGame{
+    position: fixed;
+    display:none;
+    width:100vw;
+    height:100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+#clearGame h2{
+    z-index: 101;
+}
 /*animation*/
 @keyframes hideandseek {
     0%{
         bottom: 0px;
     }
     50%{
-        bottom:10%;
+        bottom:70px;
     }
     100%{
         bottom:0px;

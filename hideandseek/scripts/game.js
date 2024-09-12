@@ -4,10 +4,11 @@ let penguins = Array.from(document.getElementsByClassName('penguin'));
 /* ペンギンをクリックしたときのイベントを設定する*/
 penguins.forEach(function(element){
     element.addEventListener('click',function(){
-        gameSet();
+        gameSet(element.querySelector('img'));
     });    
 });
-function gameSet(){
+function gameSet(img){
+    console.log(img);
     document.getElementById('gameStartMessage').style.display='none';
     document.getElementById('clearGame').style.display='block';
     penguins.forEach(function(element){

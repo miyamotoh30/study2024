@@ -1,0 +1,127 @@
+@charset "utf-8";
+body{
+    width:100vw;
+    background-color: #FFAC58;
+}
+
+.notosansjp {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.museomoderno {
+    font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fontWeightBold{
+    font-weight: bold;
+}
+
+.displayNone{
+    display:none;
+}
+
+h1,h2,h3{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+ul{
+    text-align: center;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    margin-bottom: 0;
+}
+.fontColor1{
+    color:#FFAC58;
+}
+.fontColor2{
+    color:#FFDDB4;
+}
+.fontColor3{
+    color:#F1F1F1;
+}
+.fontColor4{
+    color:#BFBFBF;
+}
+
+.backGroundColor1{
+    background-color:#FFAC58;
+}
+.backGroundColor2{
+    background-color:#FFDDB4;
+}
+.backGroundColor3{
+    background-color:#F1F1F1;
+}
+.backGroundColor4{
+    background-color:#BFBFBF;
+}
+
+header{
+    width:100vw;
+    height: 52vh;
+    position:relative;
+}
+
+header h1{
+    background-color: #F1F1F1;
+    position: absolute;
+    top: 35vw;
+    right: 1rem;
+    rotate: 90deg;
+    padding: 1rem;
+    font-size: 3rem;
+}
+header h1 span{
+    position: absolute;
+    top:5rem;
+    right:-5rem;
+    padding:1rem;
+}
+
+#works,#about{
+    height:20vh;
+}
+#works h2,#about h2{
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    font-size: 2rem;
+}
+
+footer{
+    width: 100vw;
+    height: 8vh;
+}
+
+footer p{
+    padding-top:3vh;
+}
+
+footer p small{
+    font-size: 0.5rem;
+}
+
+.pageAll{
+    width:100vw;
+    height:100vh;
+}
